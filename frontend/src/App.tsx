@@ -1,19 +1,33 @@
-import { Routes, Route } from "react-router-dom";
-import Layout from "./layouts/Layout";
-import Home from "./pages/Home";
-import Event from "./pages/Event";
-import ForumPage from "./pages/ForumPage";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import Home from "./pages/Home"
+import Forum from "./pages/Forum"
+import Clubs from "./pages/Clubs"
+import Ranking from "./pages/Ranking"
+import Employability from "./pages/Employability"
+import Profile from "./pages/Profile"
+import "./index.css"
 
-export default function App() {
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout><Home /></Layout>} />
-      <Route path="/event" element={<Layout><Event /></Layout>} />
-      <Route path="/about" element={<Layout><About /></Layout>} />
-      <Route path="/contact" element={<Layout><Contact /></Layout>} />
-      <Route path="/forum" element={<Layout><ForumPage /></Layout>} />
-    </Routes>
-  );
+    <Router>
+      <div className="app-container">
+        <Header />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/forum" element={<Forum />} />
+            <Route path="/clubs" element={<Clubs />} />
+            <Route path="/ranking" element={<Ranking />} />
+            <Route path="/employability" element={<Employability />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  )
 }
+
+export default App
