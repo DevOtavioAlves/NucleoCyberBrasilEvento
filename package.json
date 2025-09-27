@@ -1,15 +1,11 @@
 {
   "dependencies": {
-<<<<<<< HEAD
     "@prisma/client": "^6.16.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "nodemailer": "^7.0.6",
-    "zod": "^4.1.11"
-=======
-    "cors": "^2.8.5",
+    "zod": "^4.1.11",
     "react-router-dom": "^7.9.3"
->>>>>>> 633ec64930baea6972f2b47a40a5c1ddcdc1ff42
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
