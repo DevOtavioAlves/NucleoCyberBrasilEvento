@@ -13,23 +13,26 @@ app.set('view engine', 'ejs'); // Configurando o EJS como motor de visualizaçã
 app.set("views", path.join(__dirname, "views"));
 
 app.get("/", (req, res) => {
-  res.render("pages/home"); // Renderizando a view Home.ejs
+  res.render("pages/home");
 });
 
 app.get("/Forum", (req, res) => {
-  res.send("Página do fórum");
+  res.render("pages/forum");
+
 });
 
-app.get("/Clubes", (req, res) => {
-  res.send("Página dos Clubes");
+app.get("/Clubs", (req, res) => {
+  res.render("pages/clubs");
+
 });
 
 app.get("/Ranking", (req, res) => {
-  res.send("Página do Ranking");
+  res.render("pages/ranking");
+
 });
 
-app.get("/Perfil", (req, res) => {
-  res.send("Página do Perfil");
+app.get("/Profile", (req, res) => {
+  res.render("pages/profile");
 });
 
 
