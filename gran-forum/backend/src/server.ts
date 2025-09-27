@@ -6,8 +6,10 @@ import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
 import { z } from 'zod';
 import { PrismaClient } from '@prisma/client';
+
 import path from 'path';
 import fs from 'fs';
+// Em CommonJS, __dirname já está disponível
 
 dotenv.config();
 
@@ -39,7 +41,7 @@ async function notifyGroupByEmail(groupId: string, subject: string, html: string
     where: { groupId, emailOn: true },
     include: { user: true },
   });
-  const bcc = subs.map((s) => s.user.email).filter(Boolean);
+  const bcc = subs.map((s: { user: { email: string } }) => s.user.email).filter(Boolean);
   if (!bcc.length) return;
 
   await transporter.sendMail({
@@ -55,7 +57,7 @@ async function notifyGroupByWhatsApp(groupId: string, text: string) {
     where: { groupId, waOn: true },
     include: { user: true },
   });
-  const phones = subs.map((s) => s.user.phone).filter(Boolean);
+  const phones = subs.map((s: { user: { phone: string | null } }) => s.user.phone).filter((phone): phone is string => typeof phone === 'string');
   if (!phones.length) return;
 
   const webhook = process.env.N8N_WHATSAPP_WEBHOOK;
@@ -210,7 +212,15 @@ app.post('/api/jobs/import', async (req, res) => {
   const { items } = schema.parse(req.body);
 
   const results = await prisma.$transaction(
-    items.map((i) =>
+    items.map((i: {
+      title: string;
+      company?: string;
+      location?: string;
+      source: string;
+      url: string;
+      publishedAt?: string;
+      tags?: string;
+    }) =>
       prisma.jobListing.upsert({
         where: { url: i.url },
         update: {
