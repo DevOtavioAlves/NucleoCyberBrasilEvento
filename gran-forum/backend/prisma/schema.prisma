@@ -1,0 +1,100 @@
+// prisma/schema.prisma  (SUBSTITUA TUDO POR ESTE CONTEÚDO)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String         @id @default(cuid())
+  name           String
+  email          String         @unique
+  phone          String?        @db.VarChar(32)
+
+  // Relações
+  groups         Group[]        @relation("GroupMembers")  // N<->N
+  threads        Thread[]       @relation("ThreadAuthor")  // 1<->N (User -> Thread.author)
+  posts          Post[]         @relation("PostAuthor")    // 1<->N (User -> Post.author)
+  subscriptions  Subscription[]                          // 1<->N (User -> Subscription.user)
+
+  createdAt      DateTime       @default(now())
+}
+
+model Group {
+  id             String         @id @default(cuid())
+  name           String         @unique
+
+  // Relações
+  members        User[]         @relation("GroupMembers")  // N<->N
+  threads        Thread[]                                     
+  subscriptions  Subscription[]                             
+
+  createdAt      DateTime       @default(now())
+}
+
+model Thread {
+  id        String   @id @default(cuid())
+
+  groupId   String
+  group     Group    @relation(fields: [groupId], references: [id], onDelete: Cascade)
+
+  authorId  String
+  author    User     @relation("ThreadAuthor", fields: [authorId], references: [id])
+
+  title     String
+  posts     Post[]
+  createdAt DateTime @default(now())
+
+  @@index([groupId])
+  @@index([authorId])
+}
+
+model Post {
+  id         String   @id @default(cuid())
+
+  threadId   String
+  thread     Thread   @relation(fields: [threadId], references: [id], onDelete: Cascade)
+
+  authorId   String
+  author     User     @relation("PostAuthor", fields: [authorId], references: [id])
+
+  content    String   @db.Text
+  via        String   @default("web")
+  createdAt  DateTime @default(now())
+
+  @@index([threadId])
+  @@index([authorId])
+}
+
+model Subscription {
+  id       String  @id @default(cuid())
+
+  userId   String
+  groupId  String
+
+  user     User    @relation(fields: [userId], references: [id])
+  group    Group   @relation(fields: [groupId], references: [id])
+
+  emailOn  Boolean @default(true)
+  waOn     Boolean @default(true)
+
+  @@unique([userId, groupId])
+  @@index([userId])
+  @@index([groupId])
+}
+
+model JobListing {
+  id          String   @id @default(cuid())
+  title       String
+  company     String?
+  location    String?
+  source      String
+  url         String   @unique
+  publishedAt DateTime?
+  tags        String?
+  createdAt   DateTime @default(now())
+}
