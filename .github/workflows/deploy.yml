@@ -1,0 +1,27 @@
+name: CI/CD Deploy AWS
+
+on:
+  push:
+    branches:
+      - main  # executa sempre que alguém fizer push na branch principal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Deploy no servidor AWS
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.AWS_USER }}
+          key: ${{ secrets.AWS_SSH_KEY }}
+          script: |
+            cd /var/www/nucleo-evento || exit 1
+            git pull origin main
+            npm install --production
+            # Se estiver rodando com PM2 (recomendado):
+            pm2 restart nucleo-evento || pm2 start app.js --name nucleo-evento
