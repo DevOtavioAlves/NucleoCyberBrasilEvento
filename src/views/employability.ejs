@@ -1,19 +1,71 @@
-<%- include('partials/header.ejs') %>
 <%- include('partials/sidebar.ejs') %>
 
 <main class="main-content">
     <section class="feed">
-        <h2>Empregabilidade</h2>
-        <p>O conteúdo da página de empregabilidade será adicionado aqui.</p>
-        </section>
-    <aside class="right-column">
-         <div class="card">
-            <h4 class="card-title">Publicações do seu interesse</h4>
-            </div>
         <div class="card">
-            <h4 class="card-title">Concursos</h4>
+            <div class="filters-bar">
+                <input type="text" placeholder="Palavra-Chave">
+                <select><option>Área</option></select>
+                <select><option>Status</option></select>
+                <select><option>Tipo de emprego</option></select>
             </div>
+        </div>
+
+        <div class="card">
+            <h4 class="card-title">Dicas empregabilidade!</h4>
+            <p><i class="fab fa-linkedin"></i> Mantenha seu LinkedIn atualizado</p>
+            <p><i class="fas fa-users"></i> Conecte-se com pessoas da sua área e recrutadores</p>
+        </div>
+        
+        <div class="card create-post">
+            <div class="input-area">
+                <div class="avatar"></div>
+                <input type="text" placeholder="Comece uma publicação">
+            </div>
+            <div class="action-buttons">
+                <button><i class="fas fa-image"></i> Imagem/Vídeo</button>
+                <button><i class="fas fa-file-alt"></i> Artigo</button>
+                <button><i class="fas fa-poll"></i> Enquete</button>
+            </div>
+        </div>
+
+        <h3>Mais Recentes</h3>
+        <div class="card post-card" style="margin-top: 15px;">
+            <div class="post-header">
+                <div class="avatar"></div>
+                <div class="user-info">
+                    <strong>Maria de Fátima</strong>
+                    <span>data de publicação</span>
+                </div>
+            </div>
+            <div class="post-content">
+                <h4>Oportunidade na XBR games</h4>
+                <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the image printing and typesetting industry lorem ipsum has been the image...</p>
+                <div class="post-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="right-column">
+        <div class="card filter-buttons">
+             <h4 class="card-title">Publicações do seu interesse</h4>
+             <button>Freelance - Desenvolvimento de Software</button>
+             <button>Estágio na Gran Cursos</button>
+             <a href="#">Mostrar tudo</a>
+        </div>
+        <div class="card filter-buttons">
+             <h4 class="card-title">Concursos</h4>
+             <button>Edital CNU</button>
+             <button>Edital Banco do Brasil</button>
+             <a href="#">Mostrar tudo</a>
+        </div>
+        <div class="card filter-buttons">
+             <h4 class="card-title">Programas de Estágio</h4>
+             <button>Gran</button>
+             <button>L'Oréal</button>
+             <a href="#">Mostrar tudo</a>
+        </div>
     </aside>
 </main>
 
-<%- include('partials/footer.ejs') %>
+<%- include ('partials/footer') %>

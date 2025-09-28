@@ -297,3 +297,263 @@ a {
 .create-post .action-buttons button:hover {
     background-color: #e0e0e0;
 }
+
+/* Estilos para a Página de Perfil */
+.profile-header {
+    background-color: var(--cor-container);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+.profile-banner {
+    width: 100%;
+    height: 200px;
+    background-color: #555; /* Placeholder */
+    background-image: url('https://via.placeholder.com/1000x200'); /* Imagem de exemplo */
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 5px solid var(--cor-fundo);
+    margin: -60px auto 0 auto; /* Puxa a imagem para cima */
+    position: relative;
+}
+.profile-info h2 {
+    margin-top: 10px;
+    font-size: 1.8rem;
+}
+.profile-info p {
+    color: #555;
+    margin-bottom: 15px;
+}
+.profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.profile-socials a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+.profile-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+.interest-tags span {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+.badges-container {
+    display: flex;
+    gap: 15px;
+}
+.badge {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4a4e69;
+}
+.chat-list .chat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.chat-list .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+/* Estilos para a Página de Clubes */
+.filters-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.filters-bar input, .filters-bar select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+.tabs a {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+}
+.tabs a.active {
+    border-bottom-color: var(--cor-principal);
+    color: var(--cor-principal);
+}
+.club-list-item {
+    display: grid;
+    grid-template-columns: 50px 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+.club-list-item:last-child {
+    border-bottom: none;
+}
+.suggested-clubs .club-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.suggested-clubs .club-item button {
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Estilos para a Página do Fórum */
+.forum-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--cor-container);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.forum-nav-item {
+    text-align: center;
+    cursor: pointer;
+}
+.forum-nav-item i {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 5px;
+}
+.topic-item {
+    background-color: var(--cor-container);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topic-item h4 {
+    font-size: 1.1rem;
+}
+.topic-item .tag {
+    background-color: #6c757d;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+.filter-buttons button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: #e9ecef;
+    border: none;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ========================
+   Estilos para a Página de Ranking
+   ======================== */
+.ranking-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.my-rank-card {
+    background-color: #cce3de; /* Um verde claro para destaque */
+    border: 1px solid #2a9d8f;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+.my-rank-card strong {
+    color: var(--cor-principal);
+}
+
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre as células */
+    text-align: left;
+}
+
+.ranking-table th, .ranking-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ranking-table th {
+    font-size: 1rem;
+    color: #555;
+}
+
+.ranking-table td {
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+.ranking-table .rank-position {
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Estilos para o pódio */
+.ranking-table .rank-1 { color: #D4AF37; } /* Ouro */
+.ranking-table .rank-2 { color: #C0C0C0; } /* Prata */
+.ranking-table .rank-3 { color: #CD7F32; } /* Bronze */
+
+.ranking-table .user-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ranking-table .user-info-cell .avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.ranking-table .user-info-cell span {
+    display: block;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.ranking-table .points {
+    font-weight: bold;
+    font-size: 1.1rem;
+}

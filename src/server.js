@@ -24,19 +24,19 @@ app.get("/Forum", (req, res) => {
 });
 
 app.get("/Clubs", (req, res) => {
-  res.render('layout', { title: 'forum', body: 'clubs' });
+  res.render('layout', { title: 'clubs', body: 'clubs' });
 });
 
 app.get("/Ranking", (req, res) => {
-  res.render('layout', { title: 'forum', body: 'ranking' });
+  res.render('layout', { title: 'ranking', body: 'ranking' });
 });
 
 app.get("/Profile", (req, res) => {
-  res.render('layout', { title: 'forum', body: 'profile' });
+  res.render('layout', { title: 'profile', body: 'profile' });
 });
 
 app.get("/employability", (req, res) => {
-  res.render('layout', { title: 'forum', body: 'employability' });
+  res.render('layout', { title: 'employability', body: 'employability' });
 });
 
 app.listen(8081, () => console.log("Servidor rodando na porta 8081"));

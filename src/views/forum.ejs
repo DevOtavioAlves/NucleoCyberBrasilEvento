@@ -1,19 +1,54 @@
-<%- include('partials/header.ejs') %>
 <%- include('partials/sidebar.ejs') %>
 
 <main class="main-content">
     <section class="feed">
-        <h2>Fórum Principal</h2>
-        <p>O conteúdo do fórum (tópicos recentes, filtros) será adicionado aqui.</p>
-        </section>
-     <aside class="right-column">
-         <div class="card">
-            <h4 class="card-title">Filtro Geral</h4>
+        <h2 style="margin-bottom: 10px;">Guia Fórum</h2>
+        <nav class="forum-nav">
+            <div class="forum-nav-item"><i class="fas fa-graduation-cap"></i> Meu curso</div>
+            <div class="forum-nav-item"><i class="fas fa-university"></i> Faculdade</div>
+            <div class="forum-nav-item"><i class="fas fa-star"></i> Populares</div>
+            <div class="forum-nav-item"><i class="fas fa-heart"></i> Acolher +</div>
+            <div class="forum-nav-item"><i class="fas fa-chalkboard-teacher"></i> Monitores</div>
+            <div class="forum-nav-item"><i class="fas fa-cogs"></i> Concursos</div>
+        </nav>
+
+        <h3>Mais recentes</h3>
+        <div class="topic-list" style="margin-top: 15px;">
+            <div class="topic-item">
+                <div>
+                    <h4>Dúvida Email institucional</h4>
+                </div>
+                <div><span class="tag" style="background-color: #dc3545;">Faculdade</span> 21 comentários</div>
             </div>
-        <div class="card">
+            <div class="topic-item">
+                <div>
+                    <h4>Qual o professor preferido de vocês em GTI?</h4>
+                </div>
+                <div><span class="tag" style="background-color: #6f42c1;">Meu curso</span> 150 comentários</div>
+            </div>
+            <div class="topic-item">
+                <div>
+                    <h4>Estágio Obrigatório X Opcional</h4>
+                </div>
+                <div><span class="tag" style="background-color: #28a745;">Acolher +</span> 120 comentários</div>
+            </div>
+            </div>
+    </section>
+
+    <aside class="right-column">
+        <div class="card filter-buttons">
+            <h4 class="card-title">Filtro Geral</h4>
+            <button>disciplina</button>
+            <button>área</button>
+            <button>postado por</button>
+        </div>
+        <div class="card filter-buttons">
             <h4 class="card-title">Dúvidas por semestre</h4>
+            <button>1º semestre</button>
+            <button>2º semestre</button>
+            <button>3º semestre</button>
             </div>
     </aside>
 </main>
 
-<%- include('partials/footer.ejs') %>
+<%- include ('partials/footer') %>

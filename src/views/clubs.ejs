@@ -1,10 +1,63 @@
-<%- include('partials/header.ejs') %>
 <%- include('partials/sidebar.ejs') %>
 
-<main class="main-content" style="grid-template-columns: 1fr;"> <section class="card">
-        <h2>Página de Clubes</h2>
-        <p>O conteúdo específico dos clubes (busca, lista, criação) será adicionado aqui.</p>
-        </section>
+<main class="main-content">
+    <section class="feed">
+        <div class="card">
+            <h4 class="card-title">Pesquise aqui o clube que se encaixa nos seus objetivos e interesses:</h4>
+            <div class="filters-bar">
+                <input type="text" placeholder="Palavra-Chave">
+                <select><option>Área</option></select>
+                <select><option>Status</option></select>
+                <select><option>Participantes</option></select>
+            </div>
+            
+            <nav class="tabs">
+                <a href="#" class="active">Meus Clubes</a>
+                <a href="#">Solicitações pendentes</a>
+                <a href="#">Criar Clube</a>
+            </nav>
+
+            <div class="club-list">
+                <div class="club-list-item">
+                    <div class="avatar"></div>
+                    <strong>Clube de Leitura</strong>
+                    <span>Variedades</span>
+                    <span>Aberto</span>
+                    <span>Com Professor</span>
+                    <a href="#">Sair</a>
+                </div>
+                 <div class="club-list-item">
+                    <div class="avatar"></div>
+                    <strong>Núcleo Cyber Brasil</strong>
+                    <span>Segurança da Informação</span>
+                    <span>Aberto</span>
+                    <span>Só Alunos</span>
+                    <a href="#">Sair</a>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <aside class="right-column">
+        <div class="card suggested-clubs">
+            <h4 class="card-title">Clubes sugeridos para você</h4>
+            <div class="club-item">
+                <div>
+                    <strong>Clube de Leitura</strong>
+                    <small>Variedades</small>
+                </div>
+                <button>+</button>
+            </div>
+            <div class="club-item">
+                <div>
+                    <strong>Núcleo Cyber Brasil</strong>
+                    <small>Segurança da Informação</small>
+                </div>
+                <button>+</button>
+            </div>
+            <a href="#">Mostrar tudo</a>
+        </div>
+    </aside>
 </main>
 
-<%- include('partials/footer.ejs') %>
+<%- include ('partials/footer') %>

@@ -1,13 +1,73 @@
-<%- include('partials/header.ejs') %>
+<%- include ('partials/sidebar,ejs') %>
 
-<div class="profile-page-container">
-    <div class="profile-header-banner">
+<main class="main-content" style="display: block;">
+    <div class="profile-header">
+        <div class="profile-banner"></div>
+        <div class="profile-picture"></div>
+        <div class="profile-info">
+            <h2>João da Silva</h2>
+            <p>Segurança da Informação</p>
+            <div class="profile-stats">
+                <span><strong>30</strong> conexões</span>
+                <span><strong>50</strong> publicações</span>
+                <span><strong>10º</strong> ranking</span>
+            </div>
+            <div class="profile-socials">
+                <a href="#"><i class="fas fa-comment"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
         </div>
-    <div class="profile-content">
-        <h2>Página de Perfil</h2>
-        <p>Conteúdo do perfil do usuário.</p>
+    </div>
+
+    <div class="profile-grid">
+        <div class="left-column-profile" style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="card">
+                <p>it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>
+            </div>
+            <div class="card">
+                <h4 class="card-title">Áreas de Interesse</h4>
+                <div class="interest-tags">
+                    <span>DevOps</span>
+                    <span>CyberSec</span>
+                    <span>Banco de dados</span>
+                    <button>+</button>
+                </div>
+            </div>
+            <div class="card">
+                <h4 class="card-title">Minhas Badges</h4>
+                <div class="badges-container">
+                    <div class="badge"></div>
+                    <div class="badge"></div>
+                    <div class="badge"></div>
+                    <div class="badge"></div>
+                    <div class="badge"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h4 class="card-title">Minhas Publicações</h4>
+                <div class="post-card" style="padding-top: 15px;">
+                    <p><strong>Oportunidade na XBR games</strong></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+                </div>
+            </div>
         </div>
-</div>
+        <div class="right-column-profile">
+            <div class="card chat-list">
+                <h4 class="card-title">Chat</h4>
+                <div class="chat-item">
+                    <div class="avatar"></div>
+                    <span>Maria Carolina</span>
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                 <div class="chat-item">
+                    <div class="avatar"></div>
+                    <span>Gabriel Gomes</span>
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                </div>
+        </div>
+    </div>
+</main>
 
-
-<%- include('partials/footer.ejs') %>
+<%- include ('partials/footer') %>
