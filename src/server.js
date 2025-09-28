@@ -7,33 +7,34 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs'); // Configurando o EJS como motor de visualização
 
 app.set("views", path.join(__dirname, "views"));
 
 app.get("/", (req, res) => {
-  res.render("pages/home");
+  res.render('layout', { title: 'home', body: 'pages/home' });
 });
 
 app.get("/Forum", (req, res) => {
-  res.render("pages/forum");
-
+  res.render('layout', { title: 'forum', body: 'pages/forum' });
 });
 
 app.get("/Clubs", (req, res) => {
-  res.render("pages/clubs");
-
+  res.render('layout', { title: 'forum', body: 'pages/clubs' });
 });
 
 app.get("/Ranking", (req, res) => {
-  res.render("pages/ranking");
-
+  res.render('layout', { title: 'forum', body: 'pages/ranking' });
 });
 
 app.get("/Profile", (req, res) => {
-  res.render("pages/profile");
+  res.render('layout', { title: 'forum', body: 'pages/profile' });
 });
 
+app.get("/employability", (req, res) => {
+  res.render('layout', { title: 'forum', body: 'pages/employability' });
+});
 
 app.listen(8081, () => console.log("Servidor rodando na porta 8081"));
