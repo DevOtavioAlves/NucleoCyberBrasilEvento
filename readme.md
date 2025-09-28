@@ -115,3 +115,6 @@ Após executar o comando, você verá uma mensagem no terminal confirmando que o
 Abra seu navegador e acesse a URL: **[http://localhost:8081](http://localhost:8081)**
 
 ---
+#### Encontrou um problema ou tem alguma sugestão? Entre em contato conosco através do e-mail: nucleocyberbr@gmail.com
+
+### Agradecemos sua preferência!
