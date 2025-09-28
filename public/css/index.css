@@ -683,6 +683,51 @@ a {
     background-color: #9c27b0;
 }
 
+.tag.tech,
+.tag.cybersec {
+    background-color: #00bcd4; /* Azul Claro para TI/Segurança */
+}
+
+.tag.dados {
+    background-color: #9c27b0; /* Roxo para Dados/Análise */
+}
+
+/* Novas Categorias (Cores Únicas) */
+.tag.concursos {
+    background-color: #ff9800; /* Laranja Escuro para Concursos/Carreira Pública */
+}
+
+.tag.idiomas {
+    background-color: #4caf50; /* Verde para Idiomas/Soft Skills */
+}
+
+.tag.inovacao {
+    background-color: #ff5252; /* Vermelho/Coral para Empreendedorismo/Inovação */
+}
+
+.tag.variedades {
+    background-color: #607d8b; /* Cinza/Azul Marinho para Variedades/Geral */
+}
+
+
+/* Status do Clube */
+.tag.status.open {
+    background-color: #388e3c; /* Verde mais escuro para Aberto */
+}
+
+.tag.status.closed {
+    background-color: #d32f2f; /* Vermelho Escuro para Fechado */
+}
+
+/* Mentoria */
+.tag.mentorship.prof {
+    background-color: #1976d2; /* Azul para Professor */
+}
+
+.tag.mentorship.student {
+    background-color: #7b1fa2; /* Roxo para Só Alunos */
+}
+
 .add-tag-btn {
     background: none;
     border: 1px solid #ccc;
@@ -693,6 +738,8 @@ a {
     font-size: 1.2em;
     cursor: pointer;
 }
+
+
 
 /* --------------------------------------------------------- */
 /* 6. MINHAS BADGES */

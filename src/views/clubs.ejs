@@ -1,41 +1,104 @@
-
 <main class="main-content">
     <section class="feed">
-        <div class="card">
-            <h4 class="card-title">Pesquise aqui o clube que se encaixa nos seus objetivos e interesses:</h4>
-            <div class="filters-bar">
-                <input type="text" placeholder="Palavra-Chave">
-                <select><option>Área</option></select>
-                <select><option>Status</option></select>
-                <select><option>Participantes</option></select>
+        <div>
+            <div class="card">
+                <h4 class="card-title">Pesquise aqui o clube que se encaixa nos seus objetivos e interesses:</h4>
+                <div class="filters-bar">
+                    <input type="text" placeholder="Palavra-Chave">
+                    <select>
+                        <option>Área</option>
+                    </select>
+                    <select>
+                        <option>Status</option>
+                    </select>
+                    <select>
+                        <option>Participantes</option>
+                    </select>
+                </div>
             </div>
-            
-            <nav class="tabs">
-                <a href="#" class="active">Meus Clubes</a>
-                <a href="#">Solicitações pendentes</a>
-                <a href="#">Criar Clube</a>
-            </nav>
+            <div>
+                <nav class="tabs">
+                    <a href="#" class="active">Meus Clubes</a>
+                    <a href="#">Solicitações pendentes</a>
+                    <a href="#">Criar Clube</a>
+                </nav>
+            </div>
 
-            <div class="club-list">
-                <div class="club-list-item">
-                    <div class="avatar"></div>
-                    <strong>Clube de Leitura</strong>
-                    <span>Variedades</span>
-                    <span>Aberto</span>
-                    <span>Com Professor</span>
-                    <a href="#">Sair</a>
+            <div class="topic-list">
+
+                <div class="card">
+                    <h4 class="card-title">Foco Concursos Públicos</h4>
+                    <div class="club-details-header">
+                        <div class="avatar"></div>
+
+                    </div>
+                    <div class="interest-tags club-tags">
+                        <span class="tag category concursos">Carreira Pública</span>
+                        <span class="tag status open">Aberto</span>
+                        <span class="tag mentorship prof">Com Professor</span>
+
+                    </div>
                 </div>
-                 <div class="club-list-item">
-                    <div class="avatar"></div>
-                    <strong>Núcleo Cyber Brasil</strong>
-                    <span>Segurança da Informação</span>
-                    <span>Aberto</span>
-                    <span>Só Alunos</span>
-                    <a href="#">Sair</a>
+
+                <div class="card">
+                    <h4 class="card-title">Mesa Dev Front-End</h4>
+                    <div class="club-details-header">
+                        <div class="avatar"></div>
+
+                    </div>
+                    <div class="interest-tags club-tags">
+                        <span class="tag category tech">Desenvolvimento Web</span>
+                        <span class="tag status closed">Fechado</span>
+                        <span class="tag mentorship student">Só Alunos</span>
+
+                    </div>
                 </div>
+
+                <div class="card">
+                    <h4 class="card-title">English Tech Talk</h4>
+                    <div class="club-details-header">
+                        <div class="avatar"></div>
+
+                    </div>
+                    <div class="interest-tags club-tags">
+                        <span class="tag category idiomas">Idiomas e Soft Skills</span>
+                        <span class="tag status open">Aberto</span>
+                        <span class="tag mentorship prof">Com Professor</span>
+
+                    </div>
                 </div>
+
+                <div class="card">
+                    <h4 class="card-title">Laboratório de Inovação</h4>
+                    <div class="club-details-header">
+                        <div class="avatar"></div>
+
+                    </div>
+                    <div class="interest-tags club-tags">
+                        <span class="tag category inovacao">Empreendedorismo</span>
+                        <span class="tag status open">Aberto</span>
+                        <span class="tag mentorship student">Só Alunos</span>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 class="card-title">Data Science Insights</h4>
+                    <div class="club-details-header">
+                        <div class="avatar"></div>
+
+                    </div>
+                    <div class="interest-tags club-tags">
+                        <span class="tag category tech">Análise de Dados</span>
+                        <span class="tag status closed">Fechado</span>
+                        <span class="tag mentorship prof">Com Professor</span>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
 
     <aside class="right-column">
         <div class="card suggested-clubs">
@@ -54,7 +117,22 @@
                 </div>
                 <button>+</button>
             </div>
-            <a href="#">Mostrar tudo</a>
+             <div class="club-item">
+                <div>
+                    <strong>Clube do Filme</strong>
+                    <small>Variedades</small>
+                </div>
+                <button>+</button>
+            </div>
+             <div class="club-item">
+                <div>
+                    <strong>Clube Ponto de Encontro</strong>
+                    <small>Tecnologia da Informação</small>
+                </div>
+                <button>+</button>
+            </div>
+            <a href="#">Atualizar</a>
         </div>
     </aside>
+
 </main>
