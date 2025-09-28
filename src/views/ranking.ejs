@@ -1,96 +1,92 @@
-<%- include('partials/sidebar.ejs') %>
 
-<<main class="main-content" style="grid-template-columns: 1fr;"> <div class="card ranking-card">
-        <div>
-            <h2 class="card-title" style="border: none; padding-left: 0; font-size: 1.8rem;">Ranking de Contribuidores</h2>
-            <p>Veja quem são os alunos que mais se destacam na comunidade.</p>
-        </div>
-
-        <div class="filters-bar">
-            <select name="curso">
-                <option value="todos">Todos os Cursos</option>
-                <option value="seguranca">Segurança da Informação</option>
-                <option value="gti">Gestão de TI</option>
-            </select>
-            <select name="periodo">
-                <option value="geral">Ranking Geral</option>
-                <option value="mes">Este Mês</option>
-                <option value="semana">Esta Semana</option>
-            </select>
-        </div>
-
-        <div class="my-rank-card">
-            Sua Posição: Você está em <strong>10º lugar</strong> no Ranking Geral com <strong>1.250 pontos</strong>.
-        </div>
-        
-        <table class="ranking-table">
-            <thead>
-                <tr>
-                    <th>Posição</th>
-                    <th>Usuário</th>
-                    <th>Pontuação</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="rank-position rank-1"><i class="fas fa-crown"></i> 1º</td>
-                    <td class="user-info-cell">
-                        <div class="avatar"></div>
-                        <div>
-                            <strong>Lorena Figueiredo</strong>
-                            <span>Gestão de TI</span>
-                        </div>
-                    </td>
-                    <td class="points">3.480</td>
-                </tr>
-                <tr>
-                    <td class="rank-position rank-2">2º</td>
-                    <td class="user-info-cell">
-                        <div class="avatar"></div>
-                        <div>
-                            <strong>Matheus Oliveira</strong>
-                            <span>Segurança da Informação</span>
-                        </div>
-                    </td>
-                    <td class="points">3.120</td>
-                </tr>
-                <tr>
-                    <td class="rank-position rank-3">3º</td>
-                    <td class="user-info-cell">
-                        <div class="avatar"></div>
-                        <div>
-                            <strong>Ana Isabel</strong>
-                            <span>Segurança da Informação</span>
-                        </div>
-                    </td>
-                    <td class="points">2.950</td>
-                </tr>
-                
-                <tr>
-                    <td class="rank-position">4º</td>
-                    <td class="user-info-cell">
-                        <div class="avatar"></div>
-                        <div>
-                            <strong>Gabriel Gomes</strong>
-                            <span>Gestão de TI</span>
-                        </div>
-                    </td>
-                    <td class="points">2.800</td>
-                </tr>
-                <tr>
-                    <td class="rank-position">5º</td>
-                    <td class="user-info-cell">
-                        <div class="avatar"></div>
-                        <div>
-                            <strong>Carlos Maia</strong>
-                            <span>Ciências da Computação</span>
-                        </div>
-                    </td>
-                    <td class="points">2.670</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="ranking-container">
+    <div>
+        <h2>Ranking de Contribuidores</h2>
+        <p>Veja quem são os alunos que mais se destacam na comunidade.</p>
     </div>
-</main>
 
-<%- include ('partials/footer') %>
+    <div class="filters-bar">
+        <select name="curso">
+            <option value="todos">Todos os Cursos</option>
+            <option value="seguranca">Segurança da Informação</option>
+            <option value="gti">Gestão de TI</option>
+        </select>
+        <select name="periodo">
+            <option value="geral">Ranking Geral</option>
+            <option value="mes">Este Mês</option>
+            <option value="semana">Esta Semana</option>
+        </select>
+    </div>
+
+    <div class="my-rank-card">
+        Sua Posição: Você está em <strong>10º lugar</strong> no Ranking Geral com <strong>1.250 pontos</strong>.
+    </div>
+    
+    <table class="ranking-table">
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Usuário</th>
+                <th>Pontuação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="rank-position rank-1"><i class="fas fa-crown"></i> 1º</td>
+                <td class="user-info-cell">
+                    <div class="avatar"></div>
+                    <div>
+                        <strong>Lorena Figueiredo</strong>
+                        <span>Gestão de TI</span>
+                    </div>
+                </td>
+                <td class="points">3.480</td>
+            </tr>
+            <tr>
+                <td class="rank-position rank-2">2º</td>
+                <td class="user-info-cell">
+                    <div class="avatar"></div>
+                    <div>
+                        <strong>Matheus Oliveira</strong>
+                        <span>Segurança da Informação</span>
+                    </div>
+                </td>
+                <td class="points">3.120</td>
+            </tr>
+            <tr>
+                <td class="rank-position rank-3">3º</td>
+                <td class="user-info-cell">
+                    <div class="avatar"></div>
+                    <div>
+                        <strong>Ana Isabel</strong>
+                        <span>Segurança da Informação</span>
+                    </div>
+                </td>
+                <td class="points">2.950</td>
+            </tr>
+            
+            <tr>
+                <td class="rank-position">4º</td>
+                <td class="user-info-cell">
+                    <div class="avatar"></div>
+                    <div>
+                        <strong>Gabriel Gomes</strong>
+                        <span>Gestão de TI</span>
+                    </div>
+                </td>
+                <td class="points">2.800</td>
+            </tr>
+            <tr>
+                <td class="rank-position">5º</td>
+                <td class="user-info-cell">
+                    <div class="avatar"></div>
+                    <div>
+                        <strong>Carlos Maia</strong>
+                        <span>Ciências da Computação</span>
+                    </div>
+                </td>
+                <td class="points">2.670</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

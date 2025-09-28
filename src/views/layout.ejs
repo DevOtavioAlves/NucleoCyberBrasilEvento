@@ -11,14 +11,28 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <div class="app-container">
-      <%- include ('partials/header') %>
+<body box-sizing="border-box">
+  </div class="main-container">
+        
+        <%- include('partials/header') %>
 
-      <main class="main-content">
-        <%- include(body) %>
-      </main>
+        <div class="content-wrapper">
+            
+            <%- include('partials/sidebar') %>
+            
+            <main class="main-content">
+                <div class="content-body">
+                    
+                    <%- include(body) %>
 
-    </div>
-  </body>
+                </div>
+
+                <footer class="main-footer">
+                    <%- include('partials/footer') %>
+                </footer>
+            </main>
+
+        </div> 
+    </div> 
+</body>
 </html>

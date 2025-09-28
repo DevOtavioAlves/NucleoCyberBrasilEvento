@@ -1,14 +1,12 @@
 import { fileURLToPath } from 'url';
 import express from "express";
 import path from "path";
-import expressLayouts from 'express-ejs-layouts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(express.json());
-app.use(expressLayouts);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs'); // Configurando o EJS como motor de visualização

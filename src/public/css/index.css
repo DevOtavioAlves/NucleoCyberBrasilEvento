@@ -37,7 +37,7 @@ a {
     min-height: 100vh;
 }
 
-.main-header, .main-footer {
+.main-header{
     background-color: var(--cor-principal);
     color: var(--cor-texto-claro);
     padding: 10px 20px;
@@ -91,10 +91,11 @@ a {
 
 .main-content {
     flex: 1;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 250px 1fr 250px;
     gap: 20px;
-    align-items: start;
+    align-items: center;
 }
 
 .feed {
@@ -556,4 +557,54 @@ a {
 .ranking-table .points {
     font-weight: bold;
     font-size: 1.1rem;
+}
+
+/* ========================
+   Layout Principal Corrigido (REVISAR ESTAS REGRAS)
+   ======================== */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante 100% da altura da tela, essencial! */
+    align-items: start;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-grow: 1; /* Faz a área principal crescer para ocupar o espaço */
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row; 
+}
+
+/* ========================
+   AQUI ESTÁ A CHAVE DA CENTRALIZAÇÃO
+   ======================== */
+.content-body {
+    flex-grow: 1;           /* Usa todo o espaço vertical disponível, empurrando o footer para baixo */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo na HORIZONTAL */
+    align-items: center;     /* Centraliza o conteúdo na VERTICAL */
+    width: 100%;
+}
+
+.main-footer {
+    background-color: transparent; /* Garante que não haja cor de fundo */
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+    margin-top: auto; /* Garante que ele fique no final do flex container */
+}
+
+.card-fix{
+    display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
+  gap: 20px; /* espaço entre os cards */
+  max-width: 900px; /* largura máxima da área */
+  margin: 0 auto; /* centraliza no meio da tela */
 }

@@ -1,4 +1,4 @@
-<%- include('partials/sidebar.ejs') %>
+
 
 <main class="main-content">
     <section class="feed">
@@ -12,7 +12,7 @@
                 <button><i class="fas fa-file-alt"></i> Artigo</button>
             </div>
         </div>
-
+    <div class="card-fix">
         <div class="card post-card">
             <div class="post-header">
                 <div class="avatar"></div>
@@ -58,10 +58,10 @@
                 </div>
             </div>
         </div>
-
+    </div>
     </section>
 
-    <aside class="right-column">
+    <section class="right-column main-container">
         <div class="card">
             <h4 class="card-title">Clubes em destaque</h4>
             <ul>
@@ -86,7 +86,5 @@
                 <li>Título da publicação</li>
             </ul>
         </div>
-    </aside>
+    </section>
 </main>
-
-<%- include ('partials/footer') %>
