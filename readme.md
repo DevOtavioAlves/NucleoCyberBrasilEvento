@@ -21,18 +21,6 @@ Bem-vindo à nossa rede social acadêmica! Esta plataforma foi projetada para co
 
 Este guia irá orientá-lo através das principais funcionalidades do nosso aplicativo.
 
-### Primeiros Passos
-
-#### 1. Cadastro e Login
-Para começar, crie uma conta usando seu e-mail acadêmico. Após o cadastro, você poderá acessar a plataforma com seu login e senha.
-
-#### 2. Configurando seu Perfil
-Um perfil completo é seu cartão de visitas na comunidade.
-- Acesse a página de **Perfil** através do ícone no menu.
-- Adicione uma foto e uma imagem de capa.
-- Escreva uma breve biografia sobre você.
-- Adicione suas **Áreas de Interesse** para que outros usuários com interesses similares possam te encontrar.
-
 ### Funcionalidades Principais
 
 #### 🏠 Home (Feed Principal)
@@ -43,8 +31,6 @@ A página inicial é o coração da nossa comunidade. Aqui você pode:
 
 #### 👤 Perfil
 Sua página de perfil centraliza suas informações e atividades.
-- **Editar Bio:** Mantenha suas informações e interesses atualizados.
-- **Minhas Publicações:** Veja um histórico de tudo que você já publicou.
 - **Badges:** Conquiste e exiba medalhas por suas contribuições na plataforma.
 
 #### 👥 Clubes
@@ -69,10 +55,6 @@ Conectamos você ao mercado de trabalho.
 - **Vagas:** Encontre oportunidades de estágio e emprego na sua área.
 - **Dicas:** Acesse conteúdos sobre carreira, LinkedIn e processos seletivos.
 - **Networking:** Conecte-se com recrutadores e profissionais da sua área.
-
-#### 🔔 Notificações
-Fique por dentro de tudo que acontece.
-- A página de notificações te avisa sobre novas curtidas, comentários, convites para clubes e respostas em tópicos do Fórum.
 
 #### 🤖 Chat de Ajuda
 Está com dúvidas sobre como usar a plataforma?
@@ -106,40 +88,26 @@ Antes de começar, garanta que você tenha os seguintes softwares instalados:
 #### 1. Clonar o Repositório
 Primeiro, clone este repositório para a sua máquina local usando o Git.
 ```bash
-git clone [URL-do-seu-repositório-git]
+git clone [https://github.com/DevOtavioAlves/NucleoCyberBrasilEvento.git]
 ```
 
 #### 2. Navegar para a Pasta do Projeto
 Entre na pasta do projeto que você acabou de clonar.
 ```bash
-cd [nome-da-pasta-do-projeto]
+cd [NucleoCyberBrasilEvento.main/src]
 ```
 
 #### 3. Instalar as Dependências
 Este projeto utiliza `npm` para gerenciar seus pacotes. Execute o comando abaixo para instalar tudo que é necessário (Express, EJS, etc.).
 ```bash
 npm install
-```
 
-#### 4. Configurar as Variáveis de Ambiente
-Crie um arquivo chamado `.env` na raiz do projeto e adicione as variáveis necessárias. Para começar, apenas a porta do servidor é essencial.
-```env
-# .env
-# Porta em que o servidor irá rodar
-PORT=8081
-```
 
 #### 5. Inicializar o Servidor
 Com tudo configurado, você pode iniciar a aplicação.
-
-* **Para desenvolvimento (recomendado, reinicia automaticamente ao salvar):**
-    ```bash
-    npm run dev
-    ```
-* **Para produção:**
-    ```bash
-    npm start
-    ```
+```bash
+npm server.js
+```
 
 Após executar o comando, você verá uma mensagem no terminal confirmando que o servidor está no ar: `Servidor rodando em http://localhost:8081`
 

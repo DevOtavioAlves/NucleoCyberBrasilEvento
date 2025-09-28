@@ -41,4 +41,4 @@ app.get("/Chatbot", (req, res) => {
   res.render('layout', { title: 'chatbot', body: 'chatbot', currentPage: 'chatbot'});
 });
 
-app.listen(8081, () => console.log("Servidor rodando na porta 8081"));
+app.listen(8081, () => console.log("Servidor rodando em http://localhost:8081"));
