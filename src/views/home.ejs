@@ -1,0 +1,93 @@
+%- include('partials/header.ejs') %>
+<%- include('partials/sidebar.ejs') %>
+
+<main class="main-content">
+    <section class="feed">
+        <div class="card create-post">
+            <div class="input-area">
+                <div class="avatar"></div>
+                <input type="text" placeholder="Comece uma publicação">
+            </div>
+            <div class="action-buttons">
+                <button><i class="fas fa-image"></i> Imagem/Vídeo</button>
+                <button><i class="fas fa-file-alt"></i> Artigo</button>
+            </div>
+        </div>
+
+        <div class="card post-card">
+            <div class="post-header">
+                <div class="avatar"></div>
+                <div class="user-info">
+                    <strong>Amanda Mendes</strong>
+                    <span>Data de publicação</span>
+                </div>
+            </div>
+            <div class="post-content">
+                <h4>Título da publicação</h4>
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages...</p>
+            </div>
+            <div class="post-actions">
+                <span>Nº de curtidas | Nº comentários</span>
+                <div class="action-group">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="fas fa-share"></i>
+                    <i class="far fa-bookmark"></i>
+                </div>
+            </div>
+        </div>
+
+         <div class="card post-card">
+            <div class="post-header">
+                <div class="avatar"></div>
+                <div class="user-info">
+                    <strong>Ana Isabel</strong>
+                    <span>Segurança da Informação</span>
+                </div>
+            </div>
+            <div class="post-content">
+                <h4>Título da publicação</h4>
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting...</p>
+                 <div class="post-image"></div> </div>
+            <div class="post-actions">
+                <span>Nº de curtidas | Nº comentários</span>
+                <div class="action-group">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="fas fa-share"></i>
+                    <i class="far fa-bookmark"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <aside class="right-column">
+        <div class="card">
+            <h4 class="card-title">Clubes em destaque</h4>
+            <ul>
+                <li>Clube da Leitura</li>
+                <li>Clube da Programação</li>
+                <li>Clube do Filme</li>
+                <li>Clube Ponto de Encontro</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h4 class="card-title">Top Contribuidores</h4>
+             <ul>
+                <li>Luís Ramos</li>
+                <li>Lorena Figueiredo</li>
+                <li>Matheus Oliveira</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h4 class="card-title">Eventos e Lives</h4>
+             <ul>
+                <li>Título da publicação</li>
+                <li>Título da publicação</li>
+            </ul>
+        </div>
+    </aside>
+</main>
+
+<%- include('partials/footer.ejs') %>

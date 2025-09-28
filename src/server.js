@@ -1,12 +1,14 @@
 import { fileURLToPath } from 'url';
 import express from "express";
 import path from "path";
+import expressLayouts from 'express-ejs-layouts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(express.json());
+app.use(expressLayouts);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs'); // Configurando o EJS como motor de visualização
@@ -14,27 +16,27 @@ app.set('view engine', 'ejs'); // Configurando o EJS como motor de visualizaçã
 app.set("views", path.join(__dirname, "views"));
 
 app.get("/", (req, res) => {
-  res.render('layout', { title: 'home', body: 'pages/home' });
+  res.render('layout', { title: 'home', body: 'home' });
 });
 
 app.get("/Forum", (req, res) => {
-  res.render('layout', { title: 'forum', body: 'pages/forum' });
+  res.render('layout', { title: 'forum', body: 'forum' });
 });
 
 app.get("/Clubs", (req, res) => {
-  res.render('layout', { title: 'forum', body: 'pages/clubs' });
+  res.render('layout', { title: 'forum', body: 'clubs' });
 });
 
 app.get("/Ranking", (req, res) => {
-  res.render('layout', { title: 'forum', body: 'pages/ranking' });
+  res.render('layout', { title: 'forum', body: 'ranking' });
 });
 
 app.get("/Profile", (req, res) => {
-  res.render('layout', { title: 'forum', body: 'pages/profile' });
+  res.render('layout', { title: 'forum', body: 'profile' });
 });
 
 app.get("/employability", (req, res) => {
-  res.render('layout', { title: 'forum', body: 'pages/employability' });
+  res.render('layout', { title: 'forum', body: 'employability' });
 });
 
 app.listen(8081, () => console.log("Servidor rodando na porta 8081"));

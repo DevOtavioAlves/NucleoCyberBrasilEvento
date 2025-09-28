@@ -3,9 +3,10 @@
     "@prisma/client": "^6.16.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
+    "express-ejs-layouts": "^2.5.1",
     "nodemailer": "^7.0.6",
-    "zod": "^4.1.11",
-    "react-router-dom": "^7.9.3"
+    "react-router-dom": "^7.9.3",
+    "zod": "^4.1.11"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
