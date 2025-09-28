@@ -21,6 +21,8 @@ body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
     color: var(--cor-texto-escuro);
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -37,7 +39,7 @@ a {
     min-height: 100vh;
 }
 
-.main-header{
+.main-header {
     background-color: var(--cor-principal);
     color: var(--cor-texto-claro);
     padding: 10px 20px;
@@ -57,7 +59,7 @@ a {
 }
 
 .main-header .search-bar input {
-    width: 100%;
+    width: 65%;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -69,10 +71,48 @@ a {
     gap: 20px;
 }
 
-.main-header .nav-icons i { /* Use Font Awesome ou similar */
+.main-header .nav-icons i {
+    /* Use Font Awesome ou similar */
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    /* centraliza o menu */
+    padding: 10px 0;
+}
+
+.nav-icons a {
+    display: flex;
+    flex-direction: column;
+    /* ícone em cima, texto embaixo */
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin: 0 15px;
+}
+
+.nav-icons a i {
+    font-size: 20px;
+    /* tamanho dos ícones */
+    margin-bottom: 4px;
+}
+
+.nav-icons a:hover,
+.nav-icons a.active {
+    color: #820606;
+    /* destaque ao passar o mouse ou ativo */
+}
+
+.nav-icons a.active {
+    border-bottom: 2px solid #fff;
+    /* linha branca embaixo, como no LinkedIn */
+    padding-bottom: 2px;
+}
+
 
 .content-wrapper {
     display: flex;
@@ -96,6 +136,7 @@ a {
     grid-template-columns: 250px 1fr 250px;
     gap: 20px;
     align-items: start;
+
 }
 
 .feed {
@@ -104,12 +145,153 @@ a {
     gap: 40px;
 }
 
+/* ========================
+   container da coluna direita
+   ======================== */
 .right-column {
+    width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
+/* lista dentro dos cards */
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* itens da lista estilo "botão" */
+.card ul li {
+    background: #f0f6fa;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    text-align: justify;
+    font-size: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    /* Indica que é clicável */
+}
+
+.card ul li :hover {
+    background-color: #d1e4f4;
+    /* Mudar a cor ao passar o mouse */
+}
+
+/* ícones dos contribuidores */
+.card ul li i {
+    font-size: 16px;
+    color: #000;
+}
+
+/* Estilo para cada linha de sugestão de usuário */
+.network-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    /* Linha divisória suave */
+}
+
+/* Remove a borda do último item */
+.network-item:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para o círculo do avatar */
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    /* Cor de fundo para simular o avatar */
+    border-radius: 50%;
+    margin-right: 10px;
+    /* Se estiver usando FontAwesome para o ícone de pessoa: */
+    /* font-size: 24px; text-align: center; line-height: 40px; */
+}
+
+/* Estilo para o nome e a profissão */
+.user-details {
+    flex-grow: 1;
+    /* Faz com que ocupe o espaço restante */
+}
+
+.user-details {
+    display: block;
+    /* Garante que o nome fique em uma linha */
+    font-size: 10px;
+}
+
+.user-details span {
+    display: block;
+    /* Garante que a área/profissão fique em outra linha */
+    font-size: 8px;
+    color: #666;
+}
+
+/* Estilo para o botão/ícone de adicionar (+) */
+.action-btn {
+    color: #333;
+    /* Cor roxa similar à da imagem */
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Estilos para os cards de tópicos e eventos */
+
+.coment-item,
+.event-item {
+    background-color: #fff;
+    border-radius: 8px;
+    /* Cantos arredondados */
+    padding: 10px;
+    margin-bottom: 8px;
+    /* Espaçamento entre os itens */
+    cursor: pointer;
+    /* Indica que é clicável */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destacar */
+}
+
+.coment-item:hover,
+.event-item:hover {
+    background-color: #d1e4f4;
+    /* Mudar a cor ao passar o mouse */
+}
+
+.coment-item strong,
+.event-item strong {
+    display: block;
+    /* Garante que o título fique em uma linha */
+    font-size: 10px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.coment-item span,
+.event-item span {
+    display: block;
+    /* Garante que a data fique na linha de baixo */
+    font-size: 8px;
+    color: #666;
+}
+
+/* Estilo para o título principal do card */
+.card-title {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
 
 /* ========================
    Componentes Reutilizáveis
@@ -124,7 +306,7 @@ a {
 }
 
 .card-title {
-    font-size: 1.2rem;
+    font-size: 12px;
     font-weight: bold;
     margin-bottom: 15px;
     border-left: 4px solid var(--cor-principal);
@@ -172,7 +354,8 @@ a {
     transition: background-color 0.3s;
 }
 
-.main-menu a:hover, .main-menu a.active {
+.main-menu a:hover,
+.main-menu a.active {
     background-color: rgba(217, 4, 41, 0.1);
     font-weight: bold;
 }
@@ -188,7 +371,7 @@ a {
 .chatbot-widget {
     margin-top: 20px;
     background-color: #fff;
-    border: 2px dashed var(--cor-principal);
+    border: 2px dashed var(--cor-texto-escuro);
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -214,28 +397,40 @@ a {
     flex-direction: column;
     gap: 15px;
 }
+
 .post-header {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .post-header .avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: #ccc;
 }
+
 .post-header .user-info {
     font-size: 0.9rem;
 }
+
 .post-header .user-info span {
     display: block;
     color: #555;
     font-size: 0.8rem;
 }
+
 .post-content p {
+    font-size: 0.65rem;
     line-height: 1.5;
 }
+
+.post-content h4 {
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
 .post-image {
     width: 100%;
     height: auto;
@@ -243,20 +438,87 @@ a {
     background-color: #e0e0e0;
     min-height: 200px;
 }
+
+.post-card span {
+    font-size: 0.65rem;
+}
+
 .post-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #ccc;
     padding-top: 10px;
+    font-size: 0, 5rem;
 }
+
 .post-actions .action-group {
     display: flex;
     gap: 20px;
 }
+
 .post-actions i {
     cursor: pointer;
     font-size: 1.2rem;
+}
+
+/* Estilo para o container principal da enquete */
+.poll-container {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+/* Estilo para cada opção de voto */
+.poll-option {
+    position: relative;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    /* Importante para a barra de votos */
+    transition: border-color 0.2s;
+}
+
+.poll-option:hover {
+    border-color: #007bff;
+}
+
+/* A barra de progresso do voto (fundo) */
+.vote-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #8deffc;
+    /* Cor de fundo da barra */
+    z-index: 1;
+    transition: width 0.5s ease-in-out;
+}
+
+/* O texto e a contagem ficam acima da barra */
+.option-text,
+.vote-count {
+    position: relative;
+    z-index: 2;
+    /* Garante que o texto fique na frente da barra */
+    color: #333;
+    font-weight: 500;
+}
+
+.vote-count {
+    float: right;
+    font-size: 0.9em;
+    color: #007bff;
+}
+
+.total-votes {
+    display: block;
+    text-align: right;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
 }
 
 .create-post {
@@ -264,17 +526,20 @@ a {
     flex-direction: column;
     gap: 10px;
 }
+
 .create-post .input-area {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .create-post .avatar {
-     width: 40px;
-     height: 40px;
-     border-radius: 50%;
-     background-color: #ccc;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
 }
+
 .create-post input[type="text"] {
     flex-grow: 1;
     padding: 12px;
@@ -282,10 +547,12 @@ a {
     border: 1px solid #ccc;
     background-color: #fff;
 }
+
 .create-post .action-buttons {
     display: flex;
     justify-content: space-around;
 }
+
 .create-post .action-buttons button {
     background: none;
     border: none;
@@ -295,89 +562,301 @@ a {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
+
 .create-post .action-buttons button:hover {
     background-color: #e0e0e0;
 }
 
-/* Estilos para a Página de Perfil */
+/* --------------------------------------------------------- */
+/* 3. PROFILE HEADER */
+/* --------------------------------------------------------- */
 .profile-header {
-    background-color: var(--cor-container);
-    border-radius: 10px;
-    margin-bottom: 20px;
+    /* Layout para centralizar a foto e info */
     text-align: center;
     position: relative;
-    padding-bottom: 20px;
+    /* Opcional: padding-top para foto não cobrir o banner */
 }
-.profile-banner {
-    width: 100%;
-    height: 200px;
-    background-color: #555; /* Placeholder */
-    background-image: url('https://via.placeholder.com/1000x200'); /* Imagem de exemplo */
-    background-size: cover;
-    border-radius: 10px 10px 0 0;
+
+.profile-info {
+    padding: 10px 0 20px;
 }
-.profile-picture {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-color: #ccc;
-    border: 5px solid var(--cor-fundo);
-    margin: -60px auto 0 auto; /* Puxa a imagem para cima */
-    position: relative;
-}
+
 .profile-info h2 {
-    margin-top: 10px;
-    font-size: 1.8rem;
+    margin-bottom: 5px;
 }
+
 .profile-info p {
-    color: #555;
-    margin-bottom: 15px;
+    color: gray;
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
+
 .profile-stats {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9em;
+}
+
+.ranking-badge {
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.social-icon.linkedin {
+    color: #0077B5;
+    /* Cor oficial do LinkedIn */
+    margin-left: 10px;
+}
+
+.social-icon.chat {
+    color: var(--cor-texto-escuro);
+}
+
+/* --------------------------------------------------------- */
+/* 4. PROFILE BODY (Layout de 2 Colunas) */
+/* --------------------------------------------------------- */
+.profile-body {
+    display: flex;
     gap: 20px;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
-.profile-socials a {
-    margin: 0 10px;
-    font-size: 1.5rem;
-}
-.profile-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+
+.left-column-profile {
+    flex: 3;
+    /* Coluna Principal é maior */
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    align-items: start;
 }
-.interest-tags span {
-    background-color: #2a9d8f;
-    color: white;
+
+.right-column-profile {
+    flex: 1.5;
+    /* Coluna Lateral é menor */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+}
+
+.card p {
+    padding: 10px 15px;
+}
+
+.card-title {
+    padding: 10px 15px;
+    margin: 0;
+}
+
+/* --------------------------------------------------------- */
+/* 5. ÁREAS DE INTERESSE (TAGS) */
+/* --------------------------------------------------------- */
+.interest-tags {
+    padding: 10px 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* Para garantir que caibam */
+}
+
+.tag {
     padding: 5px 10px;
     border-radius: 5px;
-    margin-right: 5px;
-    font-size: 0.9rem;
+    color: white;
+    font-size: 0.9em;
 }
+
+.tag.devops {
+    background-color: #ff5252;
+}
+
+.tag.cybersec {
+    background-color: #00bcd4;
+}
+
+.tag.dados {
+    background-color: #9c27b0;
+}
+
+.add-tag-btn {
+    background: none;
+    border: 1px solid #ccc;
+    color: #ccc;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------- */
+/* 6. MINHAS BADGES */
+/* --------------------------------------------------------- */
 .badges-container {
     display: flex;
     gap: 15px;
+    justify-content: center;
+    padding: 15px;
 }
+
 .badge {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--cor-secundaria);
+    /* Cor de fundo do badge */
     border-radius: 50%;
-    background-color: #4a4e69;
+    /* Simula a borda vermelha que aparece nas badges ativas */
 }
-.chat-list .chat-item {
+
+.badge.active {
+    border: 3px solid var(--cor-principal);
+}
+
+/* --------------------------------------------------------- */
+/* 7. MINHAS PUBLICAÇÕES */
+/* --------------------------------------------------------- */
+.post-owner-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    padding: 10px 15px 5px;
 }
-.chat-list .avatar {
+
+.post-owner-header .avatar {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.post-owner-header .user-info {
+    margin-left: 10px;
+}
+
+.post-owner-header strong {
+    display: block;
+    font-size: 0.9em;
+}
+
+.post-owner-header span {
+    font-size: 0.7em;
+    color: gray;
+}
+
+.recommendation-tag {
+    margin-left: auto;
+    background-color: #ffeb3b;
+    /* Amarelo da tag recomendação */
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.post-content-area {
+    padding: 10px 15px;
+}
+
+.post-content-area p {
+    padding: 0;
+    /* Remove padding extra em parágrafos internos */
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* --------------------------------------------------------- */
+/* 8. CHATBOT DICA */
+/* --------------------------------------------------------- */
+.chatbot-tip-container {
+    background-color: var(--cor-container);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-texto-escuro);
+    position: relative;
+}
+
+.chatbot-tip-container::before {
+    content: "▲";
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 1.5em;
+    color: var(--cor-texto-escuro);
+}
+
+.tip-text {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.chatbot-icon-wrapper {
+    text-align: right;
+}
+
+.chatbot-icon {
+    display: inline-block;
     width: 40px;
     height: 40px;
+    border: 2px solid var(--cor-texto-escuro);
     border-radius: 50%;
+    position: relative;
+    line-height: 40px;
+    /* Centraliza verticalmente o ícone */
+    color: var(--cor-texto-escuro);
+    font-size: 1.2em;
+}
+
+/* --------------------------------------------------------- */
+/* 9. LISTA DE CHAT */
+/* --------------------------------------------------------- */
+.chat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chat-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.chat-item .avatar {
+    width: 35px;
+    height: 35px;
     background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-details {
+    flex-grow: 1;
+}
+
+.chat-details span {
+    display: block;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.chat-course {
+    font-size: 8px;
+    color: gray;
+    font-weight: normal !important;
+}
+
+.chat-icon {
+    color: var(--cor-texto-escuro);
+}
+
+.chat-item:last-child {
+    border-bottom: none;
+    /* Remove a borda do último item */
 }
 
 /* Estilos para a Página de Clubes */
@@ -386,26 +865,32 @@ a {
     gap: 15px;
     margin-bottom: 20px;
 }
-.filters-bar input, .filters-bar select {
+
+.filters-bar input,
+.filters-bar select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     flex-grow: 1;
 }
+
 .tabs {
     display: flex;
     border-bottom: 2px solid #ccc;
     margin-bottom: 20px;
 }
+
 .tabs a {
     padding: 10px 20px;
     font-weight: bold;
     border-bottom: 3px solid transparent;
 }
+
 .tabs a.active {
     border-bottom-color: var(--cor-principal);
     color: var(--cor-principal);
 }
+
 .club-list-item {
     display: grid;
     grid-template-columns: 50px 2fr 1fr 1fr 1fr 1fr;
@@ -413,15 +898,18 @@ a {
     padding: 15px 0;
     border-bottom: 1px solid #eee;
 }
+
 .club-list-item:last-child {
     border-bottom: none;
 }
+
 .suggested-clubs .club-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
 }
+
 .suggested-clubs .club-item button {
     background-color: var(--cor-principal);
     color: white;
@@ -442,14 +930,21 @@ a {
     padding: 10px;
     margin-bottom: 20px;
 }
+
 .forum-nav-item {
     text-align: center;
     cursor: pointer;
 }
+
 .forum-nav-item i {
     font-size: 1.5rem;
     display: block;
     margin-bottom: 5px;
+}
+.topic-list{
+    gap:20px;
+    display: flex;
+    flex-direction: column;
 }
 .topic-item {
     background-color: var(--cor-container);
@@ -460,9 +955,11 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+
 .topic-item h4 {
     font-size: 1.1rem;
 }
+
 .topic-item .tag {
     background-color: #6c757d;
     color: white;
@@ -470,6 +967,7 @@ a {
     border-radius: 5px;
     font-size: 0.8rem;
 }
+
 .filter-buttons button {
     display: block;
     width: 100%;
@@ -485,6 +983,88 @@ a {
 /* ========================
    Estilos para a Página de Ranking
    ======================== */
+.ranking-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 250px 1fr 250px;
+    gap: 20px;
+    align-items: start;
+}
+
+.rank {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 1. Contêiner Principal: Usa Flexbox para alinhar os cards lado a lado */
+.awards-container {
+    display: flex;
+    justify-content: space-between;
+    /* Distribui os cards uniformemente */
+    gap: 15px;
+    /* Espaçamento entre os cards */
+    padding: 20px;
+    background-color: #f0f8ff;
+    /* Fundo azul claro para a seção (como na imagem) */
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+/* 2. Estilo Comum para Cada Cartão de Premiação */
+.award-card {
+    flex: 1;
+    /* Garante que os três cartões tenham a mesma largura */
+    background-color: #ffffff;
+    /* Fundo branco ou muito claro para o card */
+    border: 1px solid #d3e0f0;
+    border-radius: 8px;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Título (1º, 2º, 3º lugar) */
+.award-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1f4a7d;
+    /* Cor escura para destaque */
+}
+
+/* Detalhes da premiação */
+.award-details p {
+    margin: 5px 0;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* Destaque para as horas complementares */
+.award-details strong {
+    color: #004080;
+    /* Azul escuro para maior ênfase */
+    font-size: 1em;
+}
+
+/* Você pode adicionar estilos específicos para Rank 1, 2 e 3 se quiser cores de borda diferentes (Opcional) */
+.award-card.rank-1 {
+    /* Exemplo: Adicionar uma cor de borda dourada */
+    border-top: 4px solid #D4AF37;
+}
+
+.award-card.rank-2 {
+    /* Exemplo: Adicionar uma cor de borda dourada */
+    border-top: 4px solid #C0C0C0;
+}
+
+.award-card.rank-3 {
+    /* Exemplo: Adicionar uma cor de borda dourada */
+    border-top: 4px solid #CD7F32;
+}
+
 .ranking-card {
     display: flex;
     flex-direction: column;
@@ -492,23 +1072,27 @@ a {
 }
 
 .my-rank-card {
-    background-color: #cce3de; /* Um verde claro para destaque */
+    background-color: #cce3de;
+    /* Um verde claro para destaque */
     border: 1px solid #2a9d8f;
     padding: 15px;
     border-radius: 8px;
     font-size: 1.1rem;
 }
+
 .my-rank-card strong {
     color: var(--cor-principal);
 }
 
 .ranking-table {
     width: 100%;
-    border-collapse: collapse; /* Remove espaços entre as células */
+    border-collapse: collapse;
+    /* Remove espaços entre as células */
     text-align: left;
 }
 
-.ranking-table th, .ranking-table td {
+.ranking-table th,
+.ranking-table td {
     padding: 15px;
     border-bottom: 1px solid #ccc;
 }
@@ -531,9 +1115,21 @@ a {
 }
 
 /* Estilos para o pódio */
-.ranking-table .rank-1 { color: #D4AF37; } /* Ouro */
-.ranking-table .rank-2 { color: #C0C0C0; } /* Prata */
-.ranking-table .rank-3 { color: #CD7F32; } /* Bronze */
+.ranking-table .rank-1 {
+    color: #D4AF37;
+}
+
+/* Ouro */
+.ranking-table .rank-2 {
+    color: #C0C0C0;
+}
+
+/* Prata */
+.ranking-table .rank-3 {
+    color: #CD7F32;
+}
+
+/* Bronze */
 
 .ranking-table .user-info-cell {
     display: flex;
@@ -559,60 +1155,345 @@ a {
     font-size: 1.1rem;
 }
 
+/* Container que centraliza as setas e define o fundo (similar ao fundo da imagem) */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 95%;
+    /* Ou use a largura total do seu feed */
+}
+
+/* Estilo do Botão de Paginação */
+.pagination-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--cor-texto-escuro);
+    /* Cor escura para a seta */
+    font-size: 2em;
+    /* Tamanho do ícone */
+    margin: 0 15px;
+    /* Espaço entre as duas setas */
+    transition: color 0.2s, transform 0.2s;
+    padding: 0;
+}
+
+/* Efeito de hover */
+.pagination-btn:hover {
+    color: var(--cor-principal);
+    /* Cor de destaque ao passar o mouse */
+    transform: scale(1.1);
+}
+
+/* Estilo para quando o botão estiver desabilitado (ex: na primeira/última página) */
+.pagination-btn:disabled {
+    color: #b0b0b0;
+    /* Cinza claro */
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Estilo do Card principal da seção de recompensas */
+.rewards-card {
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    /* Fundo claro da seção */
+    border-radius: 12px;
+}
+
+.rewards-card .card-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* 1. Configuração da Grade (Layout 3x4) */
+.rewards-grid {
+    display: grid;
+    /* 3 colunas de tamanho igual */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 10px 0;
+}
+
+/* 2. Estilo Comum para Cada Item de Recompensa */
+.reward-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--cor-container);
+    /* Fundo claro do item */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--cor-sombra);
+    transition: transform 0.2s;
+}
+
+.reward-item:hover {
+    transform: translateY(-3px);
+}
+
+/* Ícone do Item */
+.reward-icon {
+    font-size: 3em;
+    color: var(--cor-texto-escuro);
+    /* Cor escura para o ícone */
+    margin-bottom: 10px;
+    height: 50px;
+    /* Garante que todos os ícones tenham o mesmo espaço */
+}
+
+/* Nome e Custo em Pontos */
+.reward-name {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--cor-texto-escuro);
+}
+
+.points-cost {
+    font-size: 0.85em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* 3. Estilo do Botão/Status de Resgate */
+.reward-status {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 0 0 8px 8px;
+    /* Arredondamento apenas na parte inferior */
+    margin-top: auto;
+    /* Empurra o status para o fundo do item */
+}
+
+/* Estado: Indisponível (Vermelho, como na imagem) */
+.status-unavailable {
+    background-color: var(--cor-principal);
+    /* Vermelho/Destaque */
+    color: var(--cor-texto-claro);
+    /* Texto branco */
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Estado: Disponível (Verde/Amarelo, como na imagem) */
+.status-available {
+    background-color: #a8d582;
+    /* Verde suave (simulando "disponível") */
+    color: var(--cor-texto-escuro);
+    cursor: pointer;
+}
+
+/* Estilo para cada seção dentro do card */
+.rules-block {
+    background-color: #fff;
+    /* Fundo azul claro para cada bloco */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    /* Espaço entre os blocos */
+    text-align: justify;
+}
+
+/* Título de cada bloco */
+.block-title {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.rules-block p {
+    font-size: 0.65rem;
+}
+
+/* Estilo para o bloco de cálculo para centralizar o '+' */
+.calculation-block p {
+    margin: 5px 0;
+
+}
+
+.calculation-block .operator {
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+/* Estilo para a lista de premiações/recompensas */
+.rules-block ul {
+    list-style: none;
+    /* Remove os marcadores de lista padrão */
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.rules-block ul li {
+    padding: 2px 0;
+    font-size: 0.65em;
+}
+
+/* Rodapé de atualização */
+.update-info {
+    display: block;
+    text-align: right;
+    font-size: 0.75em;
+    color: #999;
+    margin-top: 10px;
+}
+
+/* Estilos Gerais do Card de Lista de Badges */
+.card.all-badges-list {
+    /* Pode usar o mesmo estilo de padding do seu card de Top Contribuidores */
+    padding: 15px;
+}
+
+/* Título */
+.card-title {
+    text-align: left;
+    /* Alinha o título com a lista */
+    margin-bottom: 10px;
+}
+
+/* Estilo da Lista */
+.badge-list-compact {
+    list-style: none;
+    padding: 0;
+    /* Ajuste o tamanho da fonte para caber 20 itens */
+    font-size: 0.9em;
+}
+
+/* Estilo de Cada Item */
+.badge-list-compact .badge-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--cor-container);
+}
+
+.badge-list-compact .badge-item:last-child {
+    border-bottom: none;
+}
+
+/* Ícone do Badge (simulando um avatar/emblema) */
+.badge-list-compact .badge-icon {
+    font-size: 1.1em;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    color: var(--cor-principal);
+    /* Cor de destaque para o ícone */
+}
+
+/* Detalhes (Nome e Categoria) */
+.badge-details {
+    flex-grow: 1;
+}
+
+.badge-details strong {
+    display: block;
+    font-weight: bold;
+    color: var(--cor-texto-escuro);
+}
+
+.badge-details span {
+    display: block;
+    font-size: 0.75em;
+    color: #6c757d;
+    /* Cor secundária para a categoria */
+}
+
+/* Opcional: Cores diferentes para ícones de cada categoria */
+.badge-item.academic .badge-icon {
+    color: #007bff;
+    /* Azul para acadêmico */
+}
+
+.badge-item.network .badge-icon {
+    color: #28a745;
+    /* Verde para network */
+}
+
 /* ========================
    Layout Principal Corrigido (REVISAR ESTAS REGRAS)
    ======================== */
 .main-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante 100% da altura da tela, essencial! */
+    min-height: 100vh;
+    /* Garante 100% da altura da tela, essencial! */
 }
 
 .content-wrapper {
     display: flex;
-    flex-grow: 1; /* Faz a área principal crescer para ocupar o espaço */
+    flex-grow: 1;
+    /* Faz a área principal crescer para ocupar o espaço */
 }
 
 .main-content {
     flex-grow: 1;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
 }
 
 /* ========================
    AQUI ESTÁ A CHAVE DA CENTRALIZAÇÃO
    ======================== */
 .content-body {
-    flex-grow: 1;           /* Usa todo o espaço vertical disponível, empurrando o footer para baixo */
+    flex-grow: 1;
+    /* Usa todo o espaço vertical disponível, empurrando o footer para baixo */
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo na HORIZONTAL */
-    align-items: center;     /* Centraliza o conteúdo na VERTICAL */
+    justify-content: center;
+    /* Centraliza o conteúdo na HORIZONTAL */
+    align-items: center;
+    /* Centraliza o conteúdo na VERTICAL */
     width: 100%;
 }
 
 .main-footer {
-    background-color: transparent; /* Garante que não haja cor de fundo */
-    width: 100%;
-    padding: 20px 0;
     text-align: center;
-    font-size: 0.9rem;
-    color: var(--cor-texto-secundario);
-    margin-top: auto; /* Garante que ele fique no final do flex container */
+    /* centraliza o texto */
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #555;
+    background: #f1f5f9;
+    /* cor de fundo suave */
+    border-top: 1px solid #ddd;
+    grid-column: 1 / -1;
+    /* se usar grid, garante que ocupe toda a largura */
 }
 
-.card-fix{
+.card-fix {
     display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
-  gap: 40px; /* espaço entre os cards */
-  max-width: 1200px; /* largura máxima da área */
-  margin: 0 auto; /* centraliza no meio da tela */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colunas iguais */
+    gap: 40px;
+    /* espaço entre os cards */
+    max-width: 900px;
+    /* largura máxima da área */
+    margin: 0 auto;
+    /* centraliza no meio da tela */
 }
 
 .page-container {
-  display: grid;
-  grid-template-columns: 250px 1fr 250px; /* sidebar | feed | coluna direita */
-  gap: 40px;
-  width: 100%;  /* largura máxima */
-  margin: 0 auto;     /* centraliza na página */
-  padding: 20px;
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    /* sidebar | feed | coluna direita (se tiver) */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* ← centraliza na página */
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
 }

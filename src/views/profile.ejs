@@ -1,70 +1,153 @@
-
 <main class="main-content" style="display: block;">
-    <div class="profile-header">
-        <div class="profile-banner"></div>
-        <div class="profile-picture"></div>
-        <div class="profile-info">
-            <h2>João da Silva</h2>
-            <p>Segurança da Informação</p>
-            <div class="profile-stats">
-                <span><strong>30</strong> conexões</span>
-                <span><strong>50</strong> publicações</span>
-                <span><strong>10º</strong> ranking</span>
-            </div>
-            <div class="profile-socials">
-                <a href="#"><i class="fas fa-comment"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
-    </div>
+    <div class="profile-content-area">
 
-    <div class="profile-grid">
-        <div class="left-column-profile" style="display: flex; flex-direction: column; gap: 20px;">
-            <div class="card">
-                <p>it has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>
-            </div>
-            <div class="card">
-                <h4 class="card-title">Áreas de Interesse</h4>
-                <div class="interest-tags">
-                    <span>DevOps</span>
-                    <span>CyberSec</span>
-                    <span>Banco de dados</span>
-                    <button>+</button>
-                </div>
-            </div>
-            <div class="card">
-                <h4 class="card-title">Minhas Badges</h4>
-                <div class="badges-container">
-                    <div class="badge"></div>
-                    <div class="badge"></div>
-                    <div class="badge"></div>
-                    <div class="badge"></div>
-                    <div class="badge"></div>
-                </div>
-            </div>
-            <div class="card">
-                <h4 class="card-title">Minhas Publicações</h4>
-                <div class="post-card" style="padding-top: 15px;">
-                    <p><strong>Oportunidade na XBR games</strong></p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+        <div class="profile-header">
+            <div class="profile-banner"></div>
+            <div class="profile-picture"></div>
+            <div class="profile-info">
+                <h2>João da Silva</h2>
+                <p>Segurança da Informação</p>
+                <div class="profile-stats">
+                    <span><strong>30</strong> conexões</span>
+                    <span><strong>50</strong> publicações</span>
+                    <span class="ranking-badge"><strong>10º</strong> ranking</span>
+                    <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="#" class="social-icon chat"><i class="fas fa-comment-dots fa-lg"></i></a>
                 </div>
             </div>
         </div>
-        <div class="right-column-profile">
-            <div class="card chat-list">
-                <h4 class="card-title">Chat</h4>
-                <div class="chat-item">
-                    <div class="avatar"></div>
-                    <span>Maria Carolina</span>
-                    <i class="fas fa-comment-dots"></i>
+
+        <div class="profile-body">
+
+            <section class="left-column-profile">
+                <div class="card">
+                    <p>it has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                        sheets
+                        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                        PageMaker.</p>
                 </div>
-                 <div class="chat-item">
-                    <div class="avatar"></div>
-                    <span>Gabriel Gomes</span>
-                    <i class="fas fa-comment-dots"></i>
+
+                <div class="card">
+                    <h4 class="card-title">Áreas de Interesse</h4>
+                    <div class="interest-tags">
+                        <span class="tag devops">DevOps</span>
+                        <span class="tag cybersec">CyberSec</span>
+                        <span class="tag dados">Banco de dados</span>
+                        <button class="add-tag-btn">+</button>
+                    </div>
                 </div>
+
+                <div class="card">
+                    <h4 class="card-title">Minhas Badges</h4>
+                    <div class="badges-container">
+                        <div class="badge active"></div>
+                        <div class="badge"></div>
+                        <div class="badge"></div>
+                        <div class="badge"></div>
+                        <div class="badge"></div>
+                        <div class="badge"></div>
+                    </div>
                 </div>
+
+                <div class="card">
+                    <h4 class="card-title">Minhas Publicações</h4>
+
+                    <div class="post-header post-owner-header">
+                        <div class="avatar"></div>
+                        <div class="user-info">
+                            <strong>João da Silva</strong>
+                            <span>data de publicação</span>
+                        </div>
+                        <span class="recommendation-tag">recomendação</span>
+                    </div>
+
+                    <div class="post-card post-content-area">
+                        <p><strong>Oportunidade na XBR games</strong></p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the image printing and typesetting industry lorem ipsum has been the image...</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="right-column-profile">
+
+                <div class="chatbot-tip-container">
+                    <p class="tip-text">Olá! Quer umas dicas?</p>
+                    <div class="chatbot-icon-wrapper">
+                        <i class="user-avatar"></i>
+                    </div>
+                </div>
+
+                <div class="card chat-list">
+                    <h4 class="card-title">Chat</h4>
+
+                    <div class="chat-item">
+                        <div class="avatar"></div>
+                        <div class="chat-details">
+                            <span>Maria Carolina</span>
+                            <span class="chat-course">Curso</span>
+                        </div>
+                        <i class="fas fa-comment-dots chat-icon"></i>
+                    </div>
+
+                    <div class="chat-item">
+                        <div class="avatar"></div>
+                        <div class="chat-details">
+                            <span>Gabriel Gomes</span>
+                            <span class="chat-course">Curso</span>
+                        </div>
+                        <i class="fas fa-comment-dots chat-icon"></i>
+                    </div>
+
+                    <div class="chat-item">
+                        <div class="avatar"></div>
+                        <div class="chat-details">
+                            <span>Jade Freire</span>
+                            <span class="chat-course">Curso</span>
+                        </div>
+                        <i class="fas fa-comment-dots chat-icon"></i>
+                    </div>
+
+                    <div class="chat-item">
+                        <div class="avatar"></div>
+                        <div class="chat-details">
+                            <span>Paulo César</span>
+                            <span class="chat-course">Curso</span>
+                        </div>
+                        <i class="fas fa-comment-dots chat-icon"></i>
+                    </div>
+
+                    <div class="chat-item">
+                        <div class="avatar"></div>
+                        <div class="chat-details">
+                            <span>Wanderlai</span>
+                            <span class="chat-course">Curso</span>
+                        </div>
+                        <i class="fas fa-comment-dots chat-icon"></i>
+                    </div>
+
+                    <div class="chat-item">
+                        <div class="avatar"></div>
+                        <div class="chat-details">
+                            <span>Eduarda Lima</span>
+                            <span class="chat-course">Curso</span>
+                        </div>
+                        <i class="fas fa-comment-dots chat-icon"></i>
+                    </div>
+
+                    <div class="chat-item no-border">
+                        <div class="avatar"></div>
+                        <div class="chat-details">
+                            <span>José Ribeiro</span>
+                            <span class="chat-course">Curso</span>
+                        </div>
+                        <i class="fas fa-comment-dots chat-icon"></i>
+                    </div>
+
+                </div>
+            </section>
         </div>
     </div>
 </main>

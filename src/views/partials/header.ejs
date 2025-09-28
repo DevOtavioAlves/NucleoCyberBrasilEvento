@@ -10,19 +10,33 @@
 <body>
     <div class="main-container">
         <header class="main-header">
-            <div class="logo">G</div>
+            <div class="logo">
+                <a href="/">G</a> </div>
             <div class="search-bar">
                 <input type="text" placeholder="Pesquisar...">
             </div>
+          
             <nav class="nav-icons">
-                <i class="fas fa-home"></i>
-                <i class="fas fa-comment-dots"></i>
-                <i class="fas fa-book-open"></i>
-                <i class="fas fa-trophy"></i>
-                <i class="fas fa-briefcase"></i>
-                <i class="fas fa-bell"></i>
-                <i class="fas fa-user-circle"></i>
-                <i class="fas fa-toggle-on"></i>
-            </nav>
-        </header>
+                <a href="/" class="<%= typeof currentPage !== 'undefined' && currentPage === 'home' ? 'active' : '' %>">
+                    <i class="fas fa-home"></i><span>Início</span>
+                </a>
+                <a href="/forum" class="<%= typeof currentPage !== 'undefined' && currentPage === 'forum' ? 'active' : '' %>">
+                    <i class="fas fa-comment-dots"></i><span>Fórum</span>
+                </a>
+                <a href="/clubs" class="<%= typeof currentPage !== 'undefined' && currentPage === 'clubes' ? 'active' : '' %>">
+                    <i class="fas fa-book-open"></i><span>Clubes</span>
+                </a>
+                <a href="/ranking" class="<%= typeof currentPage !== 'undefined' && currentPage === 'ranking' ? 'active' : '' %>">
+                    <i class="fas fa-trophy"></i><span>Ranking</span>
+                </a>
+                <a href="/employability" class="<%= typeof currentPage !== 'undefined' && currentPage === 'empregabilidade' ? 'active' : '' %>">
+                    <i class="fas fa-briefcase"></i><span>Carreira</span>
+                </a>
+                <a href="#notifications"><i class="fas fa-bell"></i><span>Notificações</span></a>
+                </a>
+                <a href="/profile" class="<%= typeof currentPage !== 'undefined' && currentPage === 'perfil' ? 'active' : '' %>">
+                    <i class="fas fa-user-circle"></i><span>Perfil</span>
+                </a>
+                <a href="#"><i class="fas fa-toggle-on"></i><span>Modo</span></a> </nav>
+            </header>
         <div class="content-wrapper">

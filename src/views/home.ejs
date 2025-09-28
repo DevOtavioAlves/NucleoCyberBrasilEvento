@@ -1,5 +1,3 @@
-
-
 <main class="main-content">
     <section class="feed">
         <div class="card create-post">
@@ -8,60 +6,191 @@
                 <input type="text" placeholder="Comece uma publicação">
             </div>
             <div class="action-buttons">
-                <button><i class="fas fa-image"></i> Imagem/Vídeo</button>
+                <button><i class="fas fa-video"></i> Vídeo</button>
+                <button><i class="fas fa-image"></i> Imagem</button>
                 <button><i class="fas fa-file-alt"></i> Artigo</button>
             </div>
         </div>
-    <div class="card-fix">
-        <div class="card post-card">
-            <div class="post-header">
-                <div class="avatar"></div>
-                <div class="user-info">
-                    <strong>Amanda Mendes</strong>
-                    <span>Data de publicação</span>
+        <div class="topic-list">
+            <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Carlos Silva</strong>
+                        <span>19 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>Novas Regras de Home Office</h4>
+                    <p>O governo anunciou novas diretrizes para o trabalho remoto, focando na ergonomia e no direito à
+                        desconexão. Empresas terão 60 dias para se adequar às mudanças. Um passo importante para o
+                        bem-estar!</p>
+                </div>
+                <span>125 curtidas | 34 comentários</span>
+                <div class="post-actions">
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
                 </div>
             </div>
-            <div class="post-content">
-                <h4>Título da publicação</h4>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages...</p>
-            </div>
-            <div class="post-actions">
-                <span>Nº de curtidas | Nº comentários</span>
-                <div class="action-group">
-                    <i class="far fa-heart"></i>
-                    <i class="far fa-comment"></i>
-                    <i class="fas fa-share"></i>
-                    <i class="far fa-bookmark"></i>
+           <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Juliana Alves</strong>
+                        <span>16 de Setembro, 2025</span>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <div class="post-content">
+                    <h4>Qual framework front-end você prefere?</h4>
 
-         <div class="card post-card">
-            <div class="post-header">
-                <div class="avatar"></div>
-                <div class="user-info">
-                    <strong>Ana Isabel</strong>
-                    <span>Segurança da Informação</span>
+                    <div class="poll-container" id="poll-1">
+
+                        <div class="poll-option" onclick="vote(1, 'poll-1')">
+                            <span class="option-text">React</span>
+                            <div class="vote-bar" style="width: 70%;"></div>
+                            <span class="vote-count">70 votos (45%)</span>
+                        </div>
+
+                        <div class="poll-option" onclick="vote(2, 'poll-1')">
+                            <span class="option-text">Angular</span>
+                            <div class="vote-bar" style="width: 20%;"></div>
+                            <span class="vote-count">20 votos (13%)</span>
+                        </div>
+
+                        <div class="poll-option" onclick="vote(3, 'poll-1')">
+                            <span class="option-text">Vue.js</span>
+                            <div class="vote-bar" style="width: 45%;"></div>
+                            <span class="vote-count">45 votos (29%)</span>
+                        </div>
+
+                        <div class="poll-option" onclick="vote(4, 'poll-1')">
+                            <span class="option-text">Svelte</span>
+                            <div class="vote-bar" style="width: 15%;"></div>
+                            <span class="vote-count">15 votos (10%)</span>
+                        </div>
+
+                        <small class="total-votes">Total: 150 votos</small>
+                    </div>
+                    <div class="post-actions">
+                        <div class="action-group">
+                            <i class="far fa-heart"></i>
+                            <i class="far fa-comment"></i>
+                            <i class="fas fa-share"></i>
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="post-content">
-                <h4>Título da publicação</h4>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting...</p>
-                 <div class="post-image"></div> </div>
-            <div class="post-actions">
-                <span>Nº de curtidas | Nº comentários</span>
-                <div class="action-group">
-                    <i class="far fa-heart"></i>
-                    <i class="far fa-comment"></i>
-                    <i class="fas fa-share"></i>
-                    <i class="far fa-bookmark"></i>
+            
+            <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Ana Isabel</strong>
+                        <span>18 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>3 Dicas para Senhas Fortes</h4>
+                    <p>Manter suas informações seguras é crucial. 1. Use frases longas e complexas. 2. Ative a
+                        Autenticação de Dois Fatores (2FA). 3. Nunca use a mesma senha em dois lugares diferentes!</p>
+                    <div class="post-image"></div>
+                </div>
+                <span>310 curtidas | 65 comentários</span>
+                <div class="post-actions">
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+
+            <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Juliana Costa</strong>
+                        <span>17 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>Qual seu livro favorito sobre Liderança?</h4>
+                    <p>Estou montando uma lista de leitura para o final do ano e preciso de boas recomendações. Qual
+                        livro sobre liderança ou gestão de equipes você considera essencial e por quê? Deixe sua
+                        sugestão nos comentários!</p>
+                </div>
+                <span>88 curtidas | 112 comentários</span>
+                <div class="post-actions">
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Amanda Mendes</strong>
+                        <span>15 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>Certificação Concluída! 🚀</h4>
+                    <p>Muita dedicação e noites estudando, mas valeu a pena! Finalmente consegui minha certificação em
+                        Gerenciamento de Projetos (PMP). Feliz demais por essa conquista e pronto para os próximos
+                        desafios!</p>
+                </div>
+                <span>455 curtidas | 78 comentários</span>
+                <div class="post-actions">
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Pedro Alves</strong>
+                        <span>14 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>O Futuro do Machine Learning é Pessoal</h4>
+                    <p>A personalização impulsionada pelo Machine Learning não é apenas uma tendência, é a nova
+                        realidade do mercado. Estamos vendo algoritmos cada vez mais sofisticados que entendem as
+                        necessidades individuais, elevando a experiência do cliente a um novo patamar. Qual sua opinião
+                        sobre isso?</p>
+                    <div class="post-image"></div>
+                </div>
+                <span>201 curtidas | 43 comentários</span>
+                <div class="post-actions">
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+
     </section>
 
-    <section class="right-column main-container">
+    <section class="right-column">
         <div class="card">
             <h4 class="card-title">Clubes em destaque</h4>
             <ul>
@@ -71,24 +200,108 @@
                 <li>Clube Ponto de Encontro</li>
             </ul>
         </div>
+
         <div class="card">
             <h4 class="card-title">Top Contribuidores</h4>
-             <ul>
-                <li>Luís Ramos</li>
-                <li>Lorena Figueiredo</li>
-                <li>Matheus Oliveira</li>
+            <ul>
+                <li><i class="user-avatar"></i> Lais Ramos</li>
+                <li><i class="user-avatar"></i> Lorena Figueiredo</li>
+                <li><i class="user-avatar"></i> Matheus Oliveira</li>
+                <li><i class="user-avatar"></i> Roberta Mello</li>
+                <li><i class="user-avatar"></i> Lucas Macedo</li>
             </ul>
         </div>
-        <div class="card">
-            <h4 class="card-title">Eventos e Lives</h4>
-             <ul>
-                <li>Título da publicação</li>
-                <li>Título da publicação</li>
-            </ul>
+
+        <div class="card suggestion-card">
+            <h4 class="card-title">Sugestão de Network</h4>
+
+            <div class="network-item">
+                <div class="user-avatar"></div>
+                <div class="user-details">
+                    <strong>Maria Carolina</strong>
+                    <span>Segurança da Informação</span>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="network-item">
+                <div class="user-avatar"></div>
+                <div class="user-details">
+                    <strong>Gabriel Gomes</strong>
+                    <span>Defesa Cibernética</span>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="network-item">
+                <div class="user-avatar"></div>
+                <div class="user-details">
+                    <strong>Jade Freire</strong>
+                    <span>Segurança da Informação</span>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
         </div>
-        <div class="main-footer">
-            <p>&copy; 2025 Núcleo Cyber Brasil. Todos os direitos reservados.</p>
-        </div>
+
+        <div class="card topics-card">
+    <h4 class="card-title">Últimos Tópicos Comentados</h4>
+    
+    <div class="coment-item">
+        <strong>Futuro do Desenvolvimento Web</strong>
+        <span>Último comentário:<br> 28 de Setembro, 15:30</span>
+    </div>
+    
+    <div class="coment-item">
+        <strong>Melhores Práticas em Nuvem</strong>
+        <span>Último comentário:<br> 27 de Setembro, 10:15</span>
+    </div>
+    
+    <div class="coment-item">
+        <strong>Desafios da Cibersegurança em 2025</strong>
+        <span>Último comentário:<br> 26 de Setembro, 18:00</span>
+    </div>
+    
+    <div class="coment-item">
+        <strong>Dicas para Acelerar a Carreira</strong>
+        <span>Último comentário:<br> 26 de Setembro, 11:45</span>
+    </div>
+    
+    <div class="coment-item">
+        <strong>Vale a pena fazer Mestrado?</strong>
+        <span>Último comentário:<br> 25 de Setembro, 09:00</span>
+    </div>
+</div>
+
+<div class="card events-card">
+    <h4 class="card-title">Eventos e Lives</h4>
+    
+    <div class="event-item">
+        <strong>Google Job Fair</strong>
+        <span>Data: 10 de Outubro</span>
+    </div>
+    
+    <div class="event-item">
+        <strong>Simpósio Acadêmico</strong>
+        <span>Data: 15 a 17 de Outubro</span>
+    </div>
+    
+    <div class="event-item">
+        <strong>Semana Acadêmica</strong>
+        <span>Data: 20 de Outubro</span>
+    </div>
+    
+    <div class="event-item">
+        <strong>Live: Entrevista Técnica</strong>
+        <span>Data: 25 de Outubro</span>
+    </div>
+</div>
+
     </section>
 
 </main>

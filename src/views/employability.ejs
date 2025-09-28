@@ -1,22 +1,20 @@
-
-
 <main class="main-content">
     <section class="feed">
         <div class="card">
             <div class="filters-bar">
                 <input type="text" placeholder="Palavra-Chave">
-                <select><option>Área</option></select>
-                <select><option>Status</option></select>
-                <select><option>Tipo de emprego</option></select>
+                <select>
+                    <option>Área</option>
+                </select>
+                <select>
+                    <option>Localidade</option>
+                </select>
+                <select>
+                    <option>Tipo de vaga</option>
+                </select>
             </div>
         </div>
 
-        <div class="card">
-            <h4 class="card-title">Dicas empregabilidade!</h4>
-            <p><i class="fab fa-linkedin"></i> Mantenha seu LinkedIn atualizado</p>
-            <p><i class="fas fa-users"></i> Conecte-se com pessoas da sua área e recrutadores</p>
-        </div>
-        
         <div class="card create-post">
             <div class="input-area">
                 <div class="avatar"></div>
@@ -30,40 +28,232 @@
         </div>
 
         <h3>Mais Recentes</h3>
-        <div class="card post-card" style="margin-top: 15px;">
-            <div class="post-header">
-                <div class="avatar"></div>
-                <div class="user-info">
-                    <strong>Maria de Fátima</strong>
-                    <span>data de publicação</span>
+        <div class="topic-list" style="margin-top: 15px;">
+            <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Mariana Siqueira</strong>
+                        <span>25 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>Como responder à pergunta: "Onde você se vê em 5 anos?"</h4>
+                    <p>Evite respostas vagas! Demonstre alinhamento com a área e ambição de crescimento. Use o método
+                        STAR para estruturar sua resposta focando em aprendizado contínuo e contribuição para a empresa.
+                        Nunca diga que estará no lugar do seu entrevistador! 😉</p>
+                    <div class="post-image"></div>
+                </div>
+                <div class="post-actions">
+                    <span>350 curtidas | 55 comentários</span>
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
                 </div>
             </div>
-            <div class="post-content">
-                <h4>Oportunidade na XBR games</h4>
-                <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the image printing and typesetting industry lorem ipsum has been the image...</p>
-                <div class="post-image"></div>
+
+            <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Equipe Empregabilidade</strong>
+                        <span>23 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>Qual Soft Skill é mais valorizada no seu setor?</h4>
+
+                    <div class="poll-container" id="poll-softskill">
+                        <div class="poll-option" onclick="vote(1, 'poll-softskill')">
+                            <span class="option-text">Comunicação e Escuta Ativa</span>
+                            <div class="vote-bar" style="width: 55%;"></div>
+                            <span class="vote-count">55%</span>
+                        </div>
+                        <div class="poll-option" onclick="vote(2, 'poll-softskill')">
+                            <span class="option-text">Resolução de Problemas</span>
+                            <div class="vote-bar" style="width: 25%;"></div>
+                            <span class="vote-count">25%</span>
+                        </div>
+                        <div class="poll-option" onclick="vote(3, 'poll-softskill')">
+                            <span class="option-text">Liderança e Gestão de Equipe</span>
+                            <div class="vote-bar" style="width: 10%;"></div>
+                            <span class="vote-count">10%</span>
+                        </div>
+                        <div class="poll-option" onclick="vote(4, 'poll-softskill')">
+                            <span class="option-text">Pensamento Crítico</span>
+                            <div class="vote-bar" style="width: 10%;"></div>
+                            <span class="vote-count">10%</span>
+                        </div>
+                        <small class="total-votes">Total: 400 votos</small>
+                    </div>
+
+                </div>
+                <div class="post-actions">
+                    <span>290 curtidas | 20 comentários</span>
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Blog Carreiras TI</strong>
+                        <span>27 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>Salário Médio de Desenvolvedor Full Stack Júnior sobe 15%</h4>
+                    <p>Um novo estudo de mercado aponta um aumento significativo no salário de entrada para
+                        desenvolvedores Full Stack. A maior demanda está em São Paulo e Belo Horizonte. Invista em
+                        Node.js e React para sair na frente!</p>
+                </div>
+                <div class="post-actions">
+                    <span>410 curtidas | 89 comentários</span>
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Maria de Fátima</strong>
+                        <span>26 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>Oportunidade de Estágio na TechCorp Solutions</h4>
+                    <p>A TechCorp abriu 5 vagas de estágio para estudantes de TI e Análise de Sistemas. Foco em
+                        desenvolvimento Java e metodologias Ágeis. Envie seu currículo para o e-mail
+                        recrutamento@techcorp.com.br até o dia 10/10. Não perca!</p>
+                    <div class="post-image"></div>
+                </div>
+                <div class="post-actions">
+                    <span>180 curtidas | 25 comentários</span>
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Recrutador Júnior</strong>
+                        <span>22 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>Para a primeira vaga, você prefere um modelo...</h4>
+
+                    <div class="poll-container" id="poll-modelo-trabalho">
+                        <div class="poll-option" onclick="vote(1, 'poll-modelo-trabalho')">
+                            <span class="option-text">Híbrido (Parte Casa, Parte Escritório)</span>
+                            <div class="vote-bar" style="width: 65%;"></div>
+                            <span class="vote-count">65%</span>
+                        </div>
+                        <div class="poll-option" onclick="vote(2, 'poll-modelo-trabalho')">
+                            <span class="option-text">Remoto (100% Home Office)</span>
+                            <div class="vote-bar" style="width: 30%;"></div>
+                            <span class="vote-count">30%</span>
+                        </div>
+                        <div class="poll-option" onclick="vote(3, 'poll-modelo-trabalho')">
+                            <span class="option-text">Presencial (100% Escritório)</span>
+                            <div class="vote-bar" style="width: 5%;"></div>
+                            <span class="vote-count">5%</span>
+                        </div>
+                        <small class="total-votes">Total: 510 votos</small>
+                    </div>
+
+                </div>
+                <div class="post-actions">
+                    <span>320 curtidas | 40 comentários</span>
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card post-card">
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <strong>Pedro Lucas (RH)</strong>
+                        <span>24 de Setembro, 2025</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h4>O que te impede de aplicar para aquela vaga dos sonhos?</h4>
+                    <p>Muitos estudantes se sentem inseguros sobre currículo, falta de experiência ou habilidades. Conte
+                        aqui nos comentários: Qual é o seu maior bloqueio ao buscar a primeira oportunidade no mercado
+                        de TI?</p>
+                </div>
+                <div class="post-actions">
+                    <span>150 curtidas | 135 comentários</span>
+                    <div class="action-group">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <aside class="right-column">
-        <div class="card filter-buttons">
-             <h4 class="card-title">Publicações do seu interesse</h4>
-             <button>Freelance - Desenvolvimento de Software</button>
-             <button>Estágio na Gran Cursos</button>
-             <a href="#">Mostrar tudo</a>
-        </div>
-        <div class="card filter-buttons">
-             <h4 class="card-title">Concursos</h4>
-             <button>Edital CNU</button>
-             <button>Edital Banco do Brasil</button>
-             <a href="#">Mostrar tudo</a>
-        </div>
-        <div class="card filter-buttons">
-             <h4 class="card-title">Programas de Estágio</h4>
-             <button>Gran</button>
-             <button>L'Oréal</button>
-             <a href="#">Mostrar tudo</a>
-        </div>
+        <div class="card">
+    <h4 class="card-title">Publicações do seu interesse</h4>
+    <ul class="filter-list">
+        <li>Freelance - Desenvolvimento de Software</li>
+        <li>Estágio na Gran Cursos</li>
+        <li>Mentoria de Carreira</li>
+        <li>Aulas de Inglês Técnico</li>
+    </ul>
+    <a href="#" class="list-link">Mostrar tudo</a>
+</div>
+
+<div class="card">
+    <h4 class="card-title">Concursos</h4>
+    <ul class="filter-list">
+        <li>Edital CNU</li>
+        <li>Edital Banco do Brasil</li>
+        <li>Concurso Polícia Federal</li>
+        <li>Concurso TJRJ</li>
+    </ul>
+    <a href="#" class="list-link">Mostrar tudo</a>
+</div>
+
+<div class="card">
+    <h4 class="card-title">Programas de Estágio</h4>
+    <ul class="filter-list">
+        <li>Gran</li>
+        <li>L'Oréal</li>
+        <li>Itaú</li>
+        <li>Vale</li>
+    </ul>
+    <a href="#" class="list-link">Mostrar tudo</a>
+</div>
     </aside>
 </main>
