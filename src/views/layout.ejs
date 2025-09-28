@@ -11,28 +11,22 @@
       rel="stylesheet"
     />
   </head>
-<body box-sizing="border-box">
-  </div class="main-container">
-        
-        <%- include('partials/header') %>
+<body>
+    
+    <%- include('partials/header') %>
 
-        <div class="content-wrapper">
-            
-            <%- include('partials/sidebar') %>
-            
-            <main class="main-content">
-                <div class="content-body">
-                    
-                    <%- include(body) %>
+    <div class="page-container">
 
-                </div>
+      <!-- Sidebar -->
+      <%- include('partials/sidebar') %>
 
-                <footer class="main-footer">
-                    <%- include('partials/footer') %>
-                </footer>
-            </main>
+      <!-- Conteúdo principal -->
+      <main class="main-content">
+        <div class="content-body">
+          <%- include(body) %>
+        </div>
+      </main>
+    </div>
 
-        </div> 
-    </div> 
-</body>
+  </body>
 </html>

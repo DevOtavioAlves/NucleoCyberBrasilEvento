@@ -95,13 +95,13 @@ a {
     flex-direction: row;
     grid-template-columns: 250px 1fr 250px;
     gap: 20px;
-    align-items: center;
+    align-items: start;
 }
 
 .feed {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 
 .right-column {
@@ -566,7 +566,6 @@ a {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Garante 100% da altura da tela, essencial! */
-    align-items: start;
 }
 
 .content-wrapper {
@@ -604,7 +603,16 @@ a {
 .card-fix{
     display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
-  gap: 20px; /* espaço entre os cards */
-  max-width: 900px; /* largura máxima da área */
+  gap: 40px; /* espaço entre os cards */
+  max-width: 1200px; /* largura máxima da área */
   margin: 0 auto; /* centraliza no meio da tela */
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px; /* sidebar | feed | coluna direita */
+  gap: 40px;
+  width: 100%;  /* largura máxima */
+  margin: 0 auto;     /* centraliza na página */
+  padding: 20px;
 }
