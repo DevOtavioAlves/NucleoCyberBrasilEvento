@@ -14,7 +14,8 @@ function rodarChat() {
         opcoes: [
             { texto: "Dúvidas sobre o Fórum", resposta: "O Fórum é o lugar para você tirar dúvidas acadêmicas, discutir temas e interagir com monitores e professores. Explore os tópicos e participe!" },
             { texto: "Como funcionam os Clubes?", resposta: "Os Clubes são grupos de estudo criados por alunos ou professores para aprofundar conhecimentos. Você pode criar ou participar de um na página 'Meus Clubes'." },
-            { texto: "O que são as Recompensas?", resposta: "Você ganha pontos e medalhas ao participar da comunidade. Acompanhe suas conquistas na página 'Minhas Recompensas'!" }
+            { texto: "O que são as Recompensas?", resposta: "Você ganha pontos e medalhas ao participar da comunidade. Acompanhe suas conquistas na página 'Minhas Recompensas'!" },
+            { texto: "Você pode me ajudar a elaborar um simulado?", resposta: "Infelizmente não no momento, mas futuramente irei conseguir te ajudar e avisarei quando puder!" }
         ]
     };
 
