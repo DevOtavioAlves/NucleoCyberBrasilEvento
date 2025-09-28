@@ -20,8 +20,10 @@ jobs:
           username: ${{ secrets.AWS_USER }}
           key: ${{ secrets.AWS_SSH_KEY }}
           script: |
-            cd /var/www/nucleo-evento || exit 1
-            git pull origin main
-            npm install --production
-            # Se estiver rodando com PM2 (recomendado):
-            pm2 restart nucleo-evento || pm2 start app.js --name nucleo-evento
+            script: |
+              cd /var/www/nucleo-evento
+              git pull origin main
+              npm install --production
+              cd src
+              pm2 restart nucleo-evento || pm2 start server.js --name nucleo-evento
+
