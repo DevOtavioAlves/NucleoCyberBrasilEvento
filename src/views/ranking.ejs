@@ -1,570 +1,494 @@
-
 <div class="ranking-container">
-<section class="rank">
-    <div>
-        <h2>Ranking de Contribuidores</h2>
-        <p>Veja quem são os alunos que mais se destacam na comunidade.</p>
-    </div>
-<div class="awards-container">
-    <h2 class="card-title">Recompensas Mensais</h2>
-    <div class="award-card rank-1">
-        <h5 class="award-title">1º lugar</h5>
-        <div class="award-details">
-            <p>Mentoria de Carreira</p>
-            <p>Análise de Currículo</p>
-            <p>Análise de LinkedIn</p>
-            <p>30h Complementares</p>
+    <section class="rank">
+        <div>
+            <h2>Ranking de Contribuidores</h2>
+            <p>Veja quem são os alunos que mais se destacam na comunidade.</p>
         </div>
-    </div>
+        <div class="awards-container">
+            <h2 class="card-title">Recompensas Mensais</h2>
+            <div class="award-card rank-1">
+                <h5 class="award-title">1º lugar</h5>
+                <div class="award-details">
+                    <p>Mentoria de Carreira</p>
+                    <p>Análise de Currículo</p>
+                    <p>Análise de LinkedIn</p>
+                    <p>30h Complementares</p>
+                </div>
+            </div>
 
-    <div class="award-card rank-2">
-        <h5 class="award-title">2º lugar</h5>
-        <div class="award-details">
-            <p>Análise de Currículo</p>
-            <p>Análise de LinkedIn</p>
-            <p>20h Complementares</p>
-        </div>
-    </div>
+            <div class="award-card rank-2">
+                <h5 class="award-title">2º lugar</h5>
+                <div class="award-details">
+                    <p>Análise de Currículo</p>
+                    <p>Análise de LinkedIn</p>
+                    <p>20h Complementares</p>
+                </div>
+            </div>
 
-    <div class="award-card rank-3">
-        <h5 class="award-title">3º lugar</h5>
-        <div class="award-details">
-            <p>Análise de LinkedIn</p>
-            <p>15h Complementares</p>
-        </div>
-    </div>
-</div>
-
-    <div class="filters-bar">
-        <select name="curso">
-            <option value="todos">Todos os Cursos</option>
-            <option value="seguranca">Segurança da Informação</option>
-            <option value="gti">Gestão de TI</option>
-        </select>
-        <select name="periodo">
-            <option value="geral">Ranking Geral</option>
-            <option value="mes">Este Mês</option>
-            <option value="semana">Esta Semana</option>
-        </select>
-    </div>
-
-    <div class="my-rank-card">
-        Sua Posição: Você está em <strong>3º lugar</strong> no Ranking Geral com <strong>2.950 pontos</strong>.
-    </div>
-    
-<table class="ranking-table">
-    <thead>
-        <tr>
-            <th>Posição</th>
-            <th>Usuário</th>
-            <th>Pontuação</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="rank-position rank-1"><i class="fas fa-crown"></i> 1º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Lorena Figueiredo</strong>
-                    <span>Gestão de TI</span>
+            <div class="award-card rank-3">
+                <h5 class="award-title">3º lugar</h5>
+                <div class="award-details">
+                    <p>Análise de LinkedIn</p>
+                    <p>15h Complementares</p>
                 </div>
-            </td>
-            <td class="points">3.480</td>
-        </tr>
-        <tr>
-            <td class="rank-position rank-2">2º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Matheus Oliveira</strong>
-                    <span>Segurança da Informação</span>
-                </div>
-            </td>
-            <td class="points">3.120</td>
-        </tr>
-        <tr>
-            <td class="rank-position rank-3">3º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>João da Silva</strong>
-                    <span>Segurança da Informação</span>
-                </div>
-            </td>
-            <td class="points">2.950</td>
-        </tr>
-        
-        <tr>
-            <td class="rank-position">4º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Gabriel Gomes</strong>
-                    <span>Gestão de TI</span>
-                </div>
-            </td>
-            <td class="points">2.800</td>
-        </tr>
-        <tr>
-            <td class="rank-position">5º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Carlos Maia</strong>
-                    <span>Ciências da Computação</span>
-                </div>
-            </td>
-            <td class="points">2.670</td>
-        </tr>
-
-        <tr>
-            <td class="rank-position">6º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Patrícia Ramos</strong>
-                    <span>Engenharia de Software</span>
-                </div>
-            </td>
-            <td class="points">2.550</td>
-        </tr>
-        <tr>
-            <td class="rank-position">7º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Roberto Santos</strong>
-                    <span>Análise de Sistemas</span>
-                </div>
-            </td>
-            <td class="points">2.410</td>
-        </tr>
-        <tr>
-            <td class="rank-position">8º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Mariana Alves</strong>
-                    <span>Desenvolvimento Web</span>
-                </div>
-            </td>
-            <td class="points">2.290</td>
-        </tr>
-        <tr>
-            <td class="rank-position">9º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Fernando Lima</strong>
-                    <span>Infraestrutura Cloud</span>
-                </div>
-            </td>
-            <td class="points">2.150</td>
-        </tr>
-        <tr>
-            <td class="rank-position">10º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Juliana Costa</strong>
-                    <span>Big Data & Analytics</span>
-                </div>
-            </td>
-            <td class="points">2.080</td>
-        </tr>
-        <tr>
-            <td class="rank-position">11º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Lúcia Barbosa</strong>
-                    <span>UX/UI Design</span>
-                </div>
-            </td>
-            <td class="points">1.990</td>
-        </tr>
-        <tr>
-            <td class="rank-position">12º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Ricardo Mello</strong>
-                    <span>Consultoria de TI</span>
-                </div>
-            </td>
-            <td class="points">1.870</td>
-        </tr>
-        <tr>
-            <td class="rank-position">13º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Sofia Teixeira</strong>
-                    <span>Suporte Técnico</span>
-                </div>
-            </td>
-            <td class="points">1.750</td>
-        </tr>
-        <tr>
-            <td class="rank-position">14º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>André Pires</strong>
-                    <span>DevOps</span>
-                </div>
-            </td>
-            <td class="points">1.660</td>
-        </tr>
-        <tr>
-            <td class="rank-position">15º</td>
-            <td class="user-info-cell">
-                <div class="avatar"></div>
-                <div>
-                    <strong>Camila Borges</strong>
-                    <span>Testes e Qualidade</span>
-                </div>
-            </td>
-            <td class="points">1.580</td>
-        </tr>
-        </tbody>
-</table>
-<div class="pagination-container">
-    <button class="pagination-btn prev-btn" title="Página Anterior">
-        <i class="fas fa-arrow-circle-left"></i> 
-    </button>
-    
-    <button class="pagination-btn next-btn" title="Próxima Página">
-        <i class="fas fa-arrow-circle-right"></i>
-    </button>
-</div>
-
-<div class="card rewards-card" style="margin-top: 20px;">
-    
-    <h4 class="card-title">Recompensas</h4>
-
-    <div class="rewards-grid">
-        
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-graduation-cap"></i></div>
-            <strong class="reward-name">Bolsa Pós-graduação</strong>
-            <small class="points-cost">60.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
             </div>
         </div>
 
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-graduation-cap"></i></div>
-            <strong class="reward-name">Bolsa Curso Livre</strong>
-            <small class="points-cost">30.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
-            </div>
+        <div class="filters-bar">
+            <select name="curso">
+                <option value="todos">Todos os Cursos</option>
+                <option value="seguranca">Segurança da Informação</option>
+                <option value="gti">Gestão de TI</option>
+            </select>
+            <select name="periodo">
+                <option value="geral">Ranking Geral</option>
+                <option value="mes">Este Mês</option>
+                <option value="semana">Esta Semana</option>
+            </select>
         </div>
 
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-graduation-cap"></i></div>
-            <strong class="reward-name">Preparatório Concursos</strong>
-            <small class="points-cost">40.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
-            </div>
+        <div class="my-rank-card">
+            Sua Posição: Você está em <strong>3º lugar</strong> no Ranking Geral com <strong>2.950 pontos</strong>.
         </div>
 
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-briefcase"></i></div>
-            <strong class="reward-name">Mentoria de Carreira</strong>
-            <small class="points-cost">40.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
-            </div>
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Usuário</th>
+                    <th>Pontuação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="rank-position rank-1"><i class="fas fa-crown"></i> 1º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Lorena Figueiredo</strong>
+                            <span>Gestão de TI</span>
+                        </div>
+                    </td>
+                    <td class="points">3.480</td>
+                </tr>
+                <tr>
+                    <td class="rank-position rank-2">2º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Matheus Oliveira</strong>
+                            <span>Segurança da Informação</span>
+                        </div>
+                    </td>
+                    <td class="points">3.120</td>
+                </tr>
+                <tr>
+                    <td class="rank-position rank-3">3º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>João da Silva</strong>
+                            <span>Segurança da Informação</span>
+                        </div>
+                    </td>
+                    <td class="points">2.950</td>
+                </tr>
+
+                <tr>
+                    <td class="rank-position">4º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Gabriel Gomes</strong>
+                            <span>Gestão de TI</span>
+                        </div>
+                    </td>
+                    <td class="points">2.800</td>
+                </tr>
+                <tr>
+                    <td class="rank-position">5º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Carlos Maia</strong>
+                            <span>Ciências da Computação</span>
+                        </div>
+                    </td>
+                    <td class="points">2.670</td>
+                </tr>
+
+                <tr>
+                    <td class="rank-position">6º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Patrícia Ramos</strong>
+                            <span>Engenharia de Software</span>
+                        </div>
+                    </td>
+                    <td class="points">2.550</td>
+                </tr>
+                <tr>
+                    <td class="rank-position">7º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Roberto Santos</strong>
+                            <span>Análise de Sistemas</span>
+                        </div>
+                    </td>
+                    <td class="points">2.410</td>
+                </tr>
+                <tr>
+                    <td class="rank-position">8º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Mariana Alves</strong>
+                            <span>Desenvolvimento Web</span>
+                        </div>
+                    </td>
+                    <td class="points">2.290</td>
+                </tr>
+                <tr>
+                    <td class="rank-position">9º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Fernando Lima</strong>
+                            <span>Infraestrutura Cloud</span>
+                        </div>
+                    </td>
+                    <td class="points">2.150</td>
+                </tr>
+                <tr>
+                    <td class="rank-position">10º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Juliana Costa</strong>
+                            <span>Big Data & Analytics</span>
+                        </div>
+                    </td>
+                    <td class="points">2.080</td>
+                </tr>
+                <tr>
+                    <td class="rank-position">11º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Lúcia Barbosa</strong>
+                            <span>UX/UI Design</span>
+                        </div>
+                    </td>
+                    <td class="points">1.990</td>
+                </tr>
+                <tr>
+                    <td class="rank-position">12º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Ricardo Mello</strong>
+                            <span>Consultoria de TI</span>
+                        </div>
+                    </td>
+                    <td class="points">1.870</td>
+                </tr>
+                <tr>
+                    <td class="rank-position">13º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Sofia Teixeira</strong>
+                            <span>Suporte Técnico</span>
+                        </div>
+                    </td>
+                    <td class="points">1.750</td>
+                </tr>
+                <tr>
+                    <td class="rank-position">14º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>André Pires</strong>
+                            <span>DevOps</span>
+                        </div>
+                    </td>
+                    <td class="points">1.660</td>
+                </tr>
+                <tr>
+                    <td class="rank-position">15º</td>
+                    <td class="user-info-cell">
+                        <div class="avatar"></div>
+                        <div>
+                            <strong>Camila Borges</strong>
+                            <span>Testes e Qualidade</span>
+                        </div>
+                    </td>
+                    <td class="points">1.580</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pagination-container">
+            <button class="pagination-btn prev-btn" title="Página Anterior">
+                <i class="fas fa-arrow-circle-left"></i>
+            </button>
+
+            <button class="pagination-btn next-btn" title="Próxima Página">
+                <i class="fas fa-arrow-circle-right"></i>
+            </button>
         </div>
 
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-briefcase"></i></div>
-            <strong class="reward-name">Análise de Currículo</strong>
-            <small class="points-cost">40.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
+        <div class="card rewards-card" style="margin-top: 20px;">
+
+            <h4 class="card-title">Recompensas</h4>
+
+            <div class="rewards-grid">
+
+                <div class="reward-item">
+                    <div class="reward-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <strong class="reward-name">Bolsa Pós-graduação</strong>
+                    <small class="points-cost">60.000 pontos</small>
+                    <div class="reward-status status-unavailable">
+                        Indisponível
+                    </div>
+                </div>
+
+                <div class="reward-item">
+                    <div class="reward-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <strong class="reward-name">Bolsa Curso Livre</strong>
+                    <small class="points-cost">30.000 pontos</small>
+                    <div class="reward-status status-unavailable">
+                        Indisponível
+                    </div>
+                </div>
+
+                <div class="reward-item">
+                    <div class="reward-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <strong class="reward-name">Preparatório Concursos</strong>
+                    <small class="points-cost">40.000 pontos</small>
+                    <div class="reward-status status-unavailable">
+                        Indisponível
+                    </div>
+                </div>
+
+                <div class="reward-item">
+                    <div class="reward-icon"><i class="fas fa-briefcase"></i></div>
+                    <strong class="reward-name">Mentoria de Carreira</strong>
+                    <small class="points-cost">40.000 pontos</small>
+                    <div class="reward-status status-unavailable">
+                        Indisponível
+                    </div>
+                </div>
+
+                <div class="reward-item">
+                    <div class="reward-icon"><i class="fas fa-briefcase"></i></div>
+                    <strong class="reward-name">Análise de Currículo</strong>
+                    <small class="points-cost">40.000 pontos</small>
+                    <div class="reward-status status-unavailable">
+                        Indisponível
+                    </div>
+                </div>
+
+                <div class="reward-item">
+                    <div class="reward-icon"><i class="fas fa-briefcase"></i></div>
+                    <strong class="reward-name">Análise de LinkedIn</strong>
+                    <small class="points-cost">40.000 pontos</small>
+                    <div class="reward-status status-unavailable">
+                        Indisponível
+                    </div>
+                </div>
+
+                <div class="reward-item">
+                    <div class="reward-icon"><i class="fas fa-tshirt"></i></div>
+                    <strong class="reward-name">Camisa</strong>
+                    <small class="points-cost">2.000 pontos</small>
+                    <div class="reward-status status-available">
+                        Disponível
+                    </div>
+                </div>
+
+                <div class="reward-item">
+                    <div class="reward-icon"><i class="fas fa-book"></i></div>
+                    <strong class="reward-name">Livro do mês</strong>
+                    <small class="points-cost">5.000 pontos</small>
+                    <div class="reward-status status-unavailable">
+                        Indisponível
+                    </div>
+                </div>
+
+                <div class="reward-item">
+                    <div class="reward-icon"><i class="fas fa-tablet-alt"></i></div>
+                    <strong class="reward-name">Tablet</strong>
+                    <small class="points-cost">85.000 pontos</small>
+                    <div class="reward-status status-unavailable">
+                        Indisponível
+                    </div>
+                </div>
+
+                <div class="reward-item">
+                    <div class="reward-icon"><i class="fas fa-laptop"></i></div>
+                    <strong class="reward-name">Notebook</strong>
+                    <small class="points-cost">95.000 pontos</small>
+                    <div class="reward-status status-unavailable">
+                        Indisponível
+                    </div>
+                </div>
+
             </div>
         </div>
+    </section>
+    <section class="right-column main-container">
+        <div class="card rules-card">
 
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-briefcase"></i></div>
-            <strong class="reward-name">Análise de LinkedIn</strong>
-            <small class="points-cost">40.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
+            <h4 class="card-title">Regras de Pontuação</h4>
+
+            <div class="rules-block">
+                <strong class="block-title">Formas de Pontuação</strong>
+                <ul>
+                    <li>Publicações <span class="points-value">(50 pontos)</span></li>
+                    <li>Comentários <span class="points-value">(25 pontos)</span></li>
+                </ul>
+            </div>
+
+            <div class="rules-block calculation-block">
+                <strong class="block-title">Cálculo de Pontos</strong>
+                <p>Nº de publicações x 50</p>
+                <p class="operator">+</p>
+                <p>Nº de comentários x 25</p>
+            </div>
+
+            <div class="rules-block">
+                <strong class="block-title">Critério de desempate</strong>
+                <p>Ganha aquele que fez o total de pontos primeiro.</p>
+            </div>
+
+            <div class="rules-block period-block">
+                <strong class="block-title">Período Válido</strong>
+                <p>Data de Início: <span class="date-value">01/09/25 00:00</span></p>
+                <p>Data de Fim: <span class="date-value">01/10/25 00:00</span></p>
+            </div>
+
+            <div class="rules-block">
+                <strong class="block-title">Premiações (Horas)</strong>
+                <ul>
+                    <li>Top 1: 30 horas complementares</li>
+                    <li>Top 2: 20 horas complementares</li>
+                    <li>Top 3: 15 horas complementares</li>
+                    <li>Top 4 a 10: 15 horas complementares</li>
+                    <li>Top 11 a 50: 10 horas complementares</li>
+                    <li>Top 51 a 100: 05 horas complementares</li>
+                </ul>
+            </div>
+
+            <div class="rules-block">
+                <strong class="block-title">Premiações (Pontos)</strong>
+                <ul>
+                    <li>Top 1: 3000 pontos</li>
+                    <li>Top 2: 2000 pontos</li>
+                    <li>Top 3: 1000 pontos</li>
+                    <li>Top 4 a 10: 700 pontos</li>
+                    <li>Top 11 a 50: 600 pontos</li>
+                    <li>Top 51 a 100: 500 pontos</li>
+                </ul>
             </div>
         </div>
+        <small class="update-info">Atualizado em: 27/09/25 05:05</small>
+        <div>
+            <div class="card rules-card">
+                <h4 class="card-title">Galeria de Badges</h4>
+                <ul class="badge-list-compact">
 
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-tshirt"></i></div>
-            <strong class="reward-name">Camisa</strong>
-            <small class="points-cost">2.000 pontos</small>
-            <div class="reward-status status-available">
-                Disponível
+                    <!-- Engajamento -->
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-comments"></i>
+                        <span>Mestre da Retórica <small>(Engajamento)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-microphone"></i>
+                        <span>Voz da Comunidade <small>(Engajamento)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-handshake"></i>
+                        <span>Boas-Vindas <small>(Engajamento)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-poll"></i>
+                        <span>Olho na Pesquisa <small>(Engajamento)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-share-alt"></i>
+                        <span>Conexão Essencial <small>(Engajamento)</small></span>
+                    </li>
+
+                    <!-- Acadêmico -->
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-book-reader"></i>
+                        <span>Coruja da Noite <small>(Acadêmico)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-globe-americas"></i>
+                        <span>Explorador do Saber <small>(Acadêmico)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-lightbulb"></i>
+                        <span>Mente Inovadora <small>(Acadêmico)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-star"></i>
+                        <span>Cérebro de Ouro <small>(Acadêmico)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-graduation-cap"></i>
+                        <span>Rumo à Formatura <small>(Acadêmico)</small></span>
+                    </li>
+
+                    <!-- Network & Liderança -->
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-user-tie"></i>
+                        <span>Capitão da Equipe <small>(Network & Liderança)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-users"></i>
+                        <span>Networking Master <small>(Network & Liderança)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-chalkboard-teacher"></i>
+                        <span>Guia Sênior <small>(Network & Liderança)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-bullhorn"></i>
+                        <span>Promotor de Eventos <small>(Network & Liderança)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-heart"></i>
+                        <span>Coração da Rede <small>(Network & Liderança)</small></span>
+                    </li>
+
+                    <!-- Desenvolvimento -->
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-certificate"></i>
+                        <span>Especialista Validado <small>(Desenvolvimento)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-calendar-check"></i>
+                        <span>Presença Garantida <small>(Desenvolvimento)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-code"></i>
+                        <span>Dev Jr. / Habilidade Técnica <small>(Desenvolvimento)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-sitemap"></i>
+                        <span>Mestre de Cerimônias <small>(Desenvolvimento)</small></span>
+                    </li>
+                    <li class="badge-item">
+                        <i class="badge-icon fas fa-plane"></i>
+                        <span>Estudante de Intercâmbio <small>(Desenvolvimento)</small></span>
+                    </li>
+                </ul>
             </div>
         </div>
-
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-sweatshirt"></i></div>
-            <strong class="reward-name">Moletom</strong>
-            <small class="points-cost">8.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
-            </div>
-        </div>
-
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-backpack"></i></div>
-            <strong class="reward-name">Mochila</strong>
-            <small class="points-cost">10.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
-            </div>
-        </div>
-
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-book"></i></div>
-            <strong class="reward-name">Livro do mês</strong>
-            <small class="points-cost">5.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
-            </div>
-        </div>
-
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-tablet-alt"></i></div>
-            <strong class="reward-name">Tablet</strong>
-            <small class="points-cost">85.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
-            </div>
-        </div>
-
-        <div class="reward-item">
-            <div class="reward-icon"><i class="fas fa-laptop"></i></div>
-            <strong class="reward-name">Notebook</strong>
-            <small class="points-cost">95.000 pontos</small>
-            <div class="reward-status status-unavailable">
-                Indisponível
-            </div>
-        </div>
-        
-    </div>
-</div>
-</section>
-<section class="right-column main-container">
-    <div class="card rules-card">
-    
-    <h4 class="card-title">Regras de Pontuação</h4>
-
-    <div class="rules-block">
-        <strong class="block-title">Formas de Pontuação</strong>
-        <ul>
-            <li>Publicações <span class="points-value">(50 pontos)</span></li>
-            <li>Comentários <span class="points-value">(25 pontos)</span></li>
-        </ul>
-    </div>
-
-    <div class="rules-block calculation-block">
-        <strong class="block-title">Cálculo de Pontos</strong>
-        <p>Nº de publicações x 50</p>
-        <p class="operator">+</p>
-        <p>Nº de comentários x 25</p>
-    </div>
-
-    <div class="rules-block">
-        <strong class="block-title">Critério de desempate</strong>
-        <p>Ganha aquele que fez o total de pontos primeiro.</p>
-    </div>
-
-    <div class="rules-block period-block">
-        <strong class="block-title">Período Válido</strong>
-        <p>Data de Início: <span class="date-value">01/09/25 00:00</span></p>
-        <p>Data de Fim: <span class="date-value">01/10/25 00:00</span></p>
-    </div>
-    
-    <div class="rules-block">
-        <strong class="block-title">Premiações (Horas)</strong>
-        <ul>
-            <li>Top 1: 30 horas complementares</li>
-            <li>Top 2: 20 horas complementares</li>
-            <li>Top 3: 15 horas complementares</li>
-            <li>Top 4 a 10: 15 horas complementares</li>
-            <li>Top 11 a 50: 10 horas complementares</li>
-            <li>Top 51 a 100: 05 horas complementares</li>
-        </ul>
-    </div>
-
-    <div class="rules-block">
-        <strong class="block-title">Premiações (Pontos)</strong>
-        <ul>
-            <li>Top 1: 3000 pontos</li>
-            <li>Top 2: 2000 pontos</li>
-            <li>Top 3: 1000 pontos</li>
-            <li>Top 4 a 10: 700 pontos</li>
-            <li>Top 11 a 50: 600 pontos</li>
-            <li>Top 51 a 100: 500 pontos</li>
-        </ul>
-    </div>
-
-    <small class="update-info">Atualizado em: 27/09/25 05:05</small>
-
-    <div class="card all-badges-list">
-    <h4 class="card-title">Galeria Completa de Badges (20 Emblemas)</h4>
-    
-    <ul class="badge-list-compact">
-        
-        <li class="badge-item engagement">
-            <i class="badge-icon fas fa-comments"></i> 
-            <div class="badge-details">
-                <strong>1. Mestre da Retórica</strong>
-                <span>(Engajamento)</span>
-            </div>
-        </li>
-        <li class="badge-item engagement">
-            <i class="badge-icon fas fa-microphone"></i>
-            <div class="badge-details">
-                <strong>2. Voz da Comunidade</strong>
-                <span>(Engajamento)</span>
-            </div>
-        </li>
-        <li class="badge-item engagement">
-            <i class="badge-icon fas fa-handshake"></i>
-            <div class="badge-details">
-                <strong>3. Boas-Vindas</strong>
-                <span>(Engajamento)</span>
-            </div>
-        </li>
-        <li class="badge-item engagement">
-            <i class="badge-icon fas fa-poll"></i>
-            <div class="badge-details">
-                <strong>4. Olho na Pesquisa</strong>
-                <span>(Engajamento)</span>
-            </div>
-        </li>
-        <li class="badge-item engagement">
-            <i class="badge-icon fas fa-share-alt"></i>
-            <div class="badge-details">
-                <strong>5. Conexão Essencial</strong>
-                <span>(Engajamento)</span>
-            </div>
-        </li>
-        
-        <li class="badge-item academic">
-            <i class="badge-icon fas fa-book-reader"></i>
-            <div class="badge-details">
-                <strong>6. Coruja da Noite</strong>
-                <span>(Acadêmico)</span>
-            </div>
-        </li>
-        <li class="badge-item academic">
-            <i class="badge-icon fas fa-globe-americas"></i>
-            <div class="badge-details">
-                <strong>7. Explorador do Saber</strong>
-                <span>(Acadêmico)</span>
-            </div>
-        </li>
-        <li class="badge-item academic">
-            <i class="badge-icon fas fa-lightbulb"></i>
-            <div class="badge-details">
-                <strong>8. Mente Inovadora</strong>
-                <span>(Acadêmico)</span>
-            </div>
-        </li>
-        <li class="badge-item academic">
-            <i class="badge-icon fas fa-star"></i>
-            <div class="badge-details">
-                <strong>9. Cérebro de Ouro</strong>
-                <span>(Acadêmico)</span>
-            </div>
-        </li>
-        <li class="badge-item academic">
-            <i class="badge-icon fas fa-graduation-cap"></i>
-            <div class="badge-details">
-                <strong>10. Rumo à Formatura</strong>
-                <span>(Acadêmico)</span>
-            </div>
-        </li>
-        
-        <li class="badge-item network">
-            <i class="badge-icon fas fa-user-tie"></i>
-            <div class="badge-details">
-                <strong>11. Capitão da Equipe</strong>
-                <span>(Network & Liderança)</span>
-            </div>
-        </li>
-        <li class="badge-item network">
-            <i class="badge-icon fas fa-users"></i>
-            <div class="badge-details">
-                <strong>12. Networking Master</strong>
-                <span>(Network & Liderança)</span>
-            </div>
-        </li>
-        <li class="badge-item network">
-            <i class="badge-icon fas fa-chalkboard-teacher"></i>
-            <div class="badge-details">
-                <strong>13. Guia Sênior</strong>
-                <span>(Network & Liderança)</span>
-            </div>
-        </li>
-        <li class="badge-item network">
-            <i class="badge-icon fas fa-bullhorn"></i>
-            <div class="badge-details">
-                <strong>14. Promotor de Eventos</strong>
-                <span>(Network & Liderança)</span>
-            </div>
-        </li>
-        <li class="badge-item network">
-            <i class="badge-icon fas fa-heart"></i>
-            <div class="badge-details">
-                <strong>15. Coração da Rede</strong>
-                <span>(Network & Liderança)</span>
-            </div>
-        </li>
-        
-        <li class="badge-item development">
-            <i class="badge-icon fas fa-certificate"></i>
-            <div class="badge-details">
-                <strong>16. Especialista Validado</strong>
-                <span>(Desenvolvimento)</span>
-            </div>
-        </li>
-        <li class="badge-item development">
-            <i class="badge-icon fas fa-calendar-check"></i>
-            <div class="badge-details">
-                <strong>17. Presença Garantida</strong>
-                <span>(Desenvolvimento)</span>
-            </div>
-        </li>
-        <li class="badge-item development">
-            <i class="badge-icon fas fa-code"></i>
-            <div class="badge-details">
-                <strong>18. Dev Jr. / Habilidade Técnica</strong>
-                <span>(Desenvolvimento)</span>
-            </div>
-        </li>
-        <li class="badge-item development">
-            <i class="badge-icon fas fa-sitemap"></i>
-            <div class="badge-details">
-                <strong>19. Mestre de Cerimônias</strong>
-                <span>(Desenvolvimento)</span>
-            </div>
-        </li>
-        <li class="badge-item development">
-            <i class="badge-icon fas fa-plane"></i>
-            <div class="badge-details">
-                <strong>20. Estudante de Intercâmbio</strong>
-                <span>(Desenvolvimento)</span>
-            </div>
-        </li>
-
-    </ul>
-</div>
-</div>
 </section>
 </div>

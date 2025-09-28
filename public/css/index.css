@@ -23,6 +23,7 @@ body {
     color: var(--cor-texto-escuro);
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 a {
@@ -122,11 +123,13 @@ a {
 }
 
 .sidebar {
-    width: 250px;
-    background-color: var(--cor-container);
-    border-radius: 10px;
+    background-color: transparent !important; /* Garante que a sidebar NÃO tenha cor de fundo */
+    width: 280px;
     padding: 20px;
-    height: fit-content;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Este é o espaço que vai separar os 3 cards */
 }
 
 .main-content {
@@ -136,7 +139,6 @@ a {
     grid-template-columns: 250px 1fr 250px;
     gap: 20px;
     align-items: start;
-
 }
 
 .feed {
@@ -1443,6 +1445,7 @@ a {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
+
 }
 
 /* ========================
@@ -1463,13 +1466,14 @@ a {
     text-align: center;
     /* centraliza o texto */
     padding: 15px 0;
+    width: 100%;
     margin-top: 30px;
     font-size: 14px;
     color: #555;
     background: #f1f5f9;
     /* cor de fundo suave */
-    border-top: 1px solid #ddd;
     grid-column: 1 / -1;
+    border-top: none;
     /* se usar grid, garante que ocupe toda a largura */
 }
 
@@ -1496,4 +1500,260 @@ a {
     padding: 20px;
     box-sizing: border-box;
     flex: 1;
+}
+
+/* ========================
+   Estilos do Widget de Chatbot na Sidebar
+   ======================== */
+
+.chatbot-widget {
+    background: linear-gradient(135deg, var(--cor-principal), #a10e2b); /* Gradiente com a cor principal */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0; /* Espaçamento acima e abaixo */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid var(--cor-principal);
+}
+
+.chatbot-widget:hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.robot-icon {
+    font-size: 2rem; /* Tamanho do ícone de robô */
+    flex-shrink: 0;
+}
+
+.chatbot-text h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.chatbot-text p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8); /* Branco com um pouco de transparência */
+    font-size: 0.85rem;
+}
+
+/* ========================
+   Estilos da Sidebar (COM CONTAINERS SEPARADOS)
+   ======================== */
+
+.sidebar {
+    width: 280px;
+    padding: 20px; /* Espaçamento interno da sidebar */
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaço ENTRE os containers */
+}
+
+/* Bloco do Perfil (Container 1) */
+.profile-summary {
+    background-color: var(--cor-container); /* Fundo do card */
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+.profile-summary .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--cor-fundo);
+    border: 3px solid var(--cor-principal); /* Borda vermelha */
+    margin: 0 auto 15px;
+}
+.profile-summary h3 {
+    margin-bottom: 5px;
+    color: var(--cor-texto-principal);
+}
+.profile-summary p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+}
+
+/* Bloco do Chatbot (Container 2 - Mantém o estilo transparente) */
+/* ========================
+   Estilos do Widget de Chatbot (Versão Card Sólido)
+   ======================== */
+
+.chatbot-widget {
+    background-color: var(--cor-container); /* USA A MESMA COR DE FUNDO DOS OUTROS CARDS */
+    border-radius: 10px;
+    padding: 20px;
+    display: flex; /* Alinha o ícone e o texto lado a lado */
+    align-items: center;
+    gap: 15px; /* Espaço entre o ícone e o texto */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.chatbot-widget:hover {
+    transform: translateY(-3px); /* Efeito sutil de elevação */
+}
+
+/* Círculo vermelho para o ícone */
+.chatbot-widget i {
+    background-color: var(--cor-principal); /* Fundo vermelho */
+    color: #ffffff; /* Ícone branco */
+    font-size: 1.8rem;
+    width: 50px; /* Define um tamanho fixo */
+    height: 50px;
+    border-radius: 50%; /* Deixa o fundo redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Impede que o ícone seja esmagado */
+}
+
+/* Área de texto */
+.chatbot-widget p {
+    background-color: transparent; /* Remove o fundo de balão que tinha antes */
+    color: var(--cor-texto-principal); /* Cor de texto padrão */
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+
+/* Bloco do Menu Principal (Container 3) */
+.main-menu-container {
+    background-color: var(--cor-container); /* Fundo do card */
+    border-radius: 10px;
+    padding: 20px;
+}
+.main-menu-container h4 {
+    color: var(--cor-texto-principal);
+    font-size: 1.1rem;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+.main-menu-container ul {
+    list-style: none;
+    padding: 0;
+}
+.main-menu-container li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--cor-texto-secundario); /* Cor padrão dos links */
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    margin-bottom: 5px;
+}
+.main-menu-container li a:hover {
+    background-color: var(--cor-fundo); /* Fundo mais escuro ao passar o mouse */
+    color: var(--cor-texto-principal);
+}
+.main-menu-container li a.active {
+    background-color: var(--cor-principal); /* Fundo vermelho no item ativo */
+    color: #ffffff; /* Texto branco no item ativo */
+    font-weight: bold;
+}
+.main-menu-container li a i {
+    font-size: 1.2rem;
+}
+
+/* ========================
+   Estilos do Chatbot (Versão em Rota Dedicada)
+   ======================== */
+
+/* Container que centraliza o chat na página */
+.chat-page-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha no topo */
+    padding: 20px 0;
+}
+
+/* A janela do chat em si */
+.chat-window {
+    width: 100%;
+    max-width: 700px; /* Largura máxima da janela do chat */
+    height: 600px; /* Altura fixa */
+    background-color: var(--cor-container);
+    border: 1px solid var(--cor-borda);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Cabeçalho do Chat */
+.chat-header {
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    border-bottom: 1px solid var(--cor-borda);
+    text-align: center;
+}
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Área de Mensagens (mesmo estilo de antes) */
+.chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.chat-message {
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+.bot-message {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    align-self: flex-start;
+}
+.user-message {
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    align-self: flex-end;
+}
+
+/* Área de Opções (mesmo estilo de antes) */
+.chat-options {
+    padding: 15px;
+    border-top: 1px solid var(--cor-borda);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.option-btn {
+    width: 100%;
+    background-color: var(--cor-input-fundo);
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto-principal);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.option-btn:hover {
+    background-color: var(--cor-principal);
+    color: #ffffff;
+}
+.option-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

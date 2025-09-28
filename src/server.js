@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.set('view engine', 'ejs'); // Configurando o EJS como motor de visualização
 
@@ -35,6 +35,10 @@ app.get("/Profile", (req, res) => {
 
 app.get("/employability", (req, res) => {
   res.render('layout', { title: 'employability', body: 'employability' });
+});
+
+app.get("/Chatbot", (req, res) => {
+  res.render('layout', { title: 'chatbot', body: 'chatbot', currentPage: 'chatbot', showSidebar: false});
 });
 
 app.listen(8081, () => console.log("Servidor rodando na porta 8081"));

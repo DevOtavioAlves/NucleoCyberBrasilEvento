@@ -18,7 +18,9 @@
     <div class="page-container">
 
       <!-- Sidebar -->
-      <%- include('partials/sidebar') %>
+        <% if (typeof showSidebar === 'undefined' || showSidebar) { %>
+        <%- include('partials/sidebar') %>
+        <% } %>
 
       <!-- Conteúdo principal -->
       <main class="main-content">
@@ -31,5 +33,6 @@
       </footer>
     </div>
 
+    <script src="/js/chat.js"></script>
   </body>
 </html>
