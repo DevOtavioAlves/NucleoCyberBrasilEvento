@@ -1,6 +1,6 @@
-# 🚀 Plataforma Conectada: Rede Social Acadêmica
+# Gran Connect
 
-Bem-vindo à nossa rede social acadêmica! Esta plataforma foi projetada para conectar estudantes, professores e pesquisadores, facilitando a troca de conhecimento, a colaboração em projetos e o desenvolvimento de carreiras.
+Bem-vindo à nossa comunidade acadêmica! Esta plataforma foi projetada para conectar estudantes, professores e pesquisadores, facilitando a troca de conhecimento, a colaboração em projetos e o desenvolvimento de carreiras.
 
 ---
 
@@ -101,7 +101,7 @@ cd [NucleoCyberBrasilEvento.main/src]
 Este projeto utiliza `npm` para gerenciar seus pacotes. Execute o comando abaixo para instalar tudo que é necessário (Express, EJS, etc.).
 ```bash
 npm install
-
+```
 
 #### 5. Inicializar o Servidor
 Com tudo configurado, você pode iniciar a aplicação.
